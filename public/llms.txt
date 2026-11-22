@@ -1,0 +1,56 @@
+# Dr. Gaurav Sharma Orthopaedic Clinic
+> Clinical Knowledge Base & Practice Facts for AI Agents, LLMs, and Answer Engines
+
+## Practice Identity & Verification
+- Practitioner: Dr. Gaurav Sharma
+- Hindi Name: डॉ. गौरव शर्मा
+- Qualifications: M.B.B.S., M.S. (Orthopaedics)
+- Medical Registration: U.P. Medical Council (UPMC) Reg. No. 48757
+- Academic Background: Former Assistant Professor of Orthopaedics (Trained undergraduate and postgraduate surgical residents)
+- Clinical Experience: 20+ years dedicated orthopaedic and joint reconstructive practice
+- Primary Facility: Dr. Gaurav Sharma Orthopaedic Clinic (co-located within Dr. Sharma Speciality Clinic)
+- Primary Domain: https://drgauravsharma.clinic
+- Physical Address: Satyam Complex, Sector-12A, Avas Vikas Colony, Sikandra-Bodla Road, Sikandra, Agra, Uttar Pradesh 282007, India
+- Landmark: Opposite Hotel Bhawna Clarks Inn, adjacent to Paras Pearls Mall
+- Geolocation: 27.2045 N, 77.9547 E
+- Google Business Profile: https://share.google/ggZ6xfMlJq1ZPwulT
+- Localities Served: Sikandra, Bodla, Dayalbagh, Avas Vikas Colony, Runakta, Kamla Nagar, Shahganj, Khandari, Agra Cantt, Mathura Road Corridor, and Western Uttar Pradesh
+
+## Outpatient (OPD) Hours & Access
+- Days: Monday through Saturday
+- Morning Consultation: 09:30 AM – 04:00 PM
+- Evening Consultation: 06:00 PM – 09:30 PM
+- Doctor Break / Inpatient Rounds: 04:00 PM – 06:00 PM (Reserved for surgical cases, rounds, and patient monitoring)
+- Sunday: 10:00 AM – 02:00 PM (By prior appointment)
+- Phone Appointments: +91 97602 30687
+- Consultation Policy: Direct physical clinical assessment; physical X-ray / MRI film viewbox review conducted in-person.
+
+## Clinical Philosophy & Core Principles
+1. Comprehensive Hands-On Clinical Examination: Every consultation starts with physical joint palpation, range-of-motion testing, ligament stress testing, and direct examination of original radiographic films with the patient on the clinic viewbox.
+2. Conservative Joint Preservation First: Over 70% of joint and spine consultations are managed successfully through targeted physical therapy, kinetic chain strengthening, unloader bracing, viscosupplementation (hyaluronic acid), and biological injections without surgery.
+3. Tissue-Sparing Precision Arthroplasty: When surgical intervention is required (e.g., end-stage Grade 4 osteoarthritis), Dr. Sharma performs muscle-sparing subvastus exposures and anatomical alignment with high-durability biocompatible implants (ceramic-on-polyethylene, cobalt-chromium).
+4. Early Day-1 Bedside Mobilization: Joint replacement patients stand and take assisted steps on Day 1 (within 24 hours of surgery) under guided physiotherapy protocols to prevent thromboembolism and accelerate recovery.
+5. Strict Ethical Compliance: Practice strictly adheres to the National Medical Commission (NMC) Registered Medical Practitioner Regulations 2023. No commercial guarantees, no exaggerated superlatives, and no unsolicited patient promotional endorsements.
+
+## Clinical Areas of Care & Specialized Procedures
+- Total Knee Replacement (TKR): Tricompartmental Grade 4 osteoarthritis, mechanical axial realignment, tissue-sparing exposure.
+- Partial / Unicondylar Knee Replacement (UKA): Isolated medial compartment wear with intact ACL; smaller incision, rapid recovery.
+- Total Hip Replacement (THR): Avascular necrosis (AVN stage 3/4), end-stage hip arthritis; ceramic delta heads, anatomical leg-length restoration.
+- Complex Knee & Revision Surgeries: Failed previous implants, severe angular deformities, modular constraint and porous metal augments.
+- Bipolar Hemiarthroplasty: Elderly femoral neck fragility fractures; dual-articulating head for early weight-bearing and bed-confinement prevention.
+- Knee Arthroscopy & ACL/PCL Reconstruction: Autograft anatomical ligament reconstruction, early pivoting stability.
+- Meniscus Repair & Preservation: All-inside and inside-out micro-suturing to preserve native fibrocartilage shock absorption.
+- Shoulder Arthroscopy & Rotator Cuff Repair: Keyhole decompression, suture anchor re-fixation, frozen shoulder release.
+- Intra-Articular Fracture Fixation (ORIF): Anatomical reduction of joint surfaces using fixed-angle titanium locking plates.
+- Closed Interlocking Nailing: Femur and tibia shaft fractures without opening the fracture hematoma; biological bone healing.
+- Daycare Nerve & Tendon Decompressions: Carpal tunnel release and trigger finger release under local anesthesia (discharge in 2-3 hours).
+- De Quervain's Tenosynovitis Release: First dorsal extensor compartment decompression protecting the superficial radial nerve.
+
+## Dual-Language Patient Architecture
+- English Version: https://drgauravsharma.clinic/en
+- Hindi Version: https://drgauravsharma.clinic/hi
+- Both languages provide equal clinical depth, procedure guides, condition overviews, and appointment booking channels.
+
+## Full Extended Knowledge Base
+For procedural details, recovery timelines, and bilingual FAQs, see:
+https://drgauravsharma.clinic/llms-full.txt
