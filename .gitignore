@@ -27,6 +27,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# turborepo
+.turbo
+
 # vercel
 .vercel
 

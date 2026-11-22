@@ -10,6 +10,7 @@ import { TopUtilityStrip } from '@/components/layout/TopUtilityStrip';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { MobileStickyBar } from '@/components/layout/MobileStickyBar';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import '@/app/globals.css';
 
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
             <MobileStickyBar />
           </div>
         </NextIntlClientProvider>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
