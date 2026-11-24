@@ -2,13 +2,20 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   DOCTOR_PROFILE,
   CLINIC_TIMINGS,
 } from '@/lib/clinic';
-import { Award, CheckCircle2, ArrowRight, ShieldCheck, UserCheck } from 'lucide-react';
+import {
+  Award,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  UserCheck,
+  GraduationCap,
+  Building2,
+} from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Reveal } from '../motion/Reveal';
 
@@ -27,50 +34,105 @@ export function MeetDoctor() {
     <section className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Doctor Portrait / Clinical Credentials Visual (5 cols) */}
+          {/* Academic & Clinical Credentials Dossier (5 cols) */}
           <div className="lg:col-span-5">
             <Reveal direction="right" distance={24}>
-              <div className="rounded-3xl bg-white border border-[#E2DBD0] p-6 sm:p-8 shadow-md relative overflow-hidden">
-                <div className="aspect-[4/5] rounded-2xl relative overflow-hidden bg-slate-900 shadow-md group mb-6">
-                  <Image
-                    src="/images/doctor-portrait.jpg"
-                    alt={docName}
-                    fill
-                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 450px"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none" />
+              <div className="rounded-3xl bg-white border border-[#E2DBD0] p-6 sm:p-7 shadow-lg relative overflow-hidden">
+                {/* Decorative background watermark */}
+                <div className="absolute top-0 right-0 w-36 h-36 bg-gradient-to-br from-[#0D7E8A]/10 to-transparent rounded-bl-full pointer-events-none" />
 
-                  <div className="absolute top-3 left-3 right-3 flex justify-between items-start pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950/75 backdrop-blur-md text-amber-400 text-xs font-bold border border-white/15 shadow-sm">
-                      <Award className="w-3.5 h-3.5" />
-                      <span>{isHi ? 'एम.एस. (हड्डी रोग)' : 'MS (Orthopaedics)'}</span>
-                    </span>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-950/75 backdrop-blur-md text-[#38BDF8] text-xs font-mono font-medium border border-white/15 shadow-sm">
-                      {isHi ? 'पंजी. 48757 UPMC' : 'Reg: 48757 UPMC'}
-                    </span>
+                {/* Dossier Header */}
+                <div className="flex items-center justify-between gap-3 pb-4 border-b border-[#F0EBE1] relative">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-[#0F2744] flex items-center justify-center text-white shadow-sm">
+                      <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D7E8A] block">
+                        {t('dossierBadge')}
+                      </span>
+                      <span className="text-xs font-semibold text-[#0F2744]">
+                        {t('upmcVerified')}
+                      </span>
+                    </div>
                   </div>
+                  <span className="text-[11px] font-mono font-semibold bg-[#0F2744]/8 text-[#0F2744] px-2.5 py-1 rounded-full border border-[#0F2744]/15 shrink-0">
+                    {t('regNumber')}
+                  </span>
+                </div>
 
-                  <div className="absolute bottom-4 left-4 right-4 pointer-events-none text-white">
-                    <h3 className="font-serif text-2xl font-bold text-white">
-                      {docName}
-                    </h3>
-                    <p className="text-xs text-[#38BDF8] font-medium tracking-wide mt-0.5">
-                      {DOCTOR_PROFILE.degrees.join(' • ')}
-                    </p>
-                    <p className="text-xs text-[#CBD5E1] mt-0.5">
-                      {docFormer}
-                    </p>
+                {/* Academic & Surgical Pedigree Box */}
+                <div className="my-5 p-4 rounded-2xl bg-gradient-to-br from-[#0F2744] to-[#16365D] text-white shadow-md relative overflow-hidden">
+                  <div className="relative z-10 space-y-3">
+                    <div>
+                      <div className="flex items-center gap-1.5 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-1">
+                        <Award className="w-3.5 h-3.5" />
+                        <span>{t('qualificationDegree')}</span>
+                      </div>
+                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                        {docName}
+                      </h3>
+                      <p className="text-xs text-[#94A3B8] font-medium mt-0.5">
+                        {isHi ? DOCTOR_PROFILE.hindiDesignation : DOCTOR_PROFILE.designation}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 border-t border-white/10 space-y-2 text-xs">
+                      <div className="flex items-start gap-2 text-[#E2E8F0]">
+                        <GraduationCap className="w-4 h-4 text-[#38BDF8] shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold text-white block">
+                            {t('facultyTenure')}
+                          </span>
+                          <span className="text-[11px] text-[#94A3B8]">
+                            {t('facultyDept')}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2 text-[#E2E8F0]">
+                        <Building2 className="w-4 h-4 text-[#34D399] shrink-0 mt-0.5" />
+                        <div>
+                          <span className="font-semibold text-white block">
+                            {t('practiceMilestone')}
+                          </span>
+                          <span className="text-[11px] text-[#94A3B8]">
+                            {t('practiceSub')}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Clinical Standards Checklist */}
+                <div className="mb-5 space-y-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#7C8894] block">
+                    {t('ethicsHeading')}
+                  </span>
+                  <div className="space-y-1.5 text-xs text-[#334155]">
+                    <div className="flex items-start gap-2 p-2 rounded-lg bg-[#FAF8F4] border border-[#EAE4D9]/80">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0D7E8A] shrink-0 mt-0.5" />
+                      <span>{t('ethic1')}</span>
+                    </div>
+                    <div className="flex items-start gap-2 p-2 rounded-lg bg-[#FAF8F4] border border-[#EAE4D9]/80">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0D7E8A] shrink-0 mt-0.5" />
+                      <span>{t('ethic2')}</span>
+                    </div>
+                    <div className="flex items-start gap-2 p-2 rounded-lg bg-[#FAF8F4] border border-[#EAE4D9]/80">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0D7E8A] shrink-0 mt-0.5" />
+                      <span>{t('ethic3')}</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Session Timings Overview */}
-                <div className="space-y-2.5">
+                <div className="space-y-2.5 pt-4 border-t border-[#F0EBE1]">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#7C8894] block">
                     {t('sessionHeading')}
                   </span>
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className="p-3 rounded-xl bg-[#FAF8F4] border border-[#EAE4D9]">
+                    <div className="p-2.5 rounded-xl bg-[#FAF8F4] border border-[#EAE4D9]">
                       <span className="font-bold text-[#0F2744] block">
                         {isHi ? CLINIC_TIMINGS[0].hindiLabel : CLINIC_TIMINGS[0].label}
                       </span>
@@ -78,7 +140,7 @@ export function MeetDoctor() {
                         {isHi && CLINIC_TIMINGS[0].hindiTime ? CLINIC_TIMINGS[0].hindiTime : CLINIC_TIMINGS[0].time}
                       </span>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#FAF8F4] border border-[#EAE4D9]">
+                    <div className="p-2.5 rounded-xl bg-[#FAF8F4] border border-[#EAE4D9]">
                       <span className="font-bold text-[#0F2744] block">
                         {isHi ? CLINIC_TIMINGS[2].hindiLabel : CLINIC_TIMINGS[2].label}
                       </span>

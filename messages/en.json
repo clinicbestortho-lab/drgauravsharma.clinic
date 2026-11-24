@@ -112,7 +112,21 @@
     "keyFocusHeading": "Key Areas of Clinical Focus",
     "sessionHeading": "OPD Consultation Schedule",
     "viewFullProfile": "View Full Qualifications & Credentials",
-    "bookWithDoctor": "Book Consultation with Dr. Sharma"
+    "bookWithDoctor": "Book Consultation with Dr. Sharma",
+    "dossierTitle": "Academic & Clinical Credentials",
+    "dossierBadge": "Verified Specialist",
+    "upmcVerified": "UP Medical Council Verified",
+    "regNumber": "Registration #48757",
+    "qualificationDegree": "M.B.B.S. • M.S. (Orthopaedics)",
+    "facultyTenure": "Former Assistant Professor",
+    "facultyDept": "Dept. of Orthopaedic Surgery (Post-Graduate Training)",
+    "practiceMilestone": "20+ Years Dedicated Practice",
+    "practiceSub": "Active surgical & outpatient care in Agra",
+    "ethicsHeading": "Clinical Practice Standards",
+    "ethic1": "Direct physical clinical examination before diagnostic tests",
+    "ethic2": "Joint preservation prioritized before surgical options",
+    "ethic3": "Transparent surgical indications & implant selection",
+    "verifyRegCta": "Verify on Official UPMC Register"
   },
   "philosophy": {
     "badge": "Clinical Approach & Care Standards",
