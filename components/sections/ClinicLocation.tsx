@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   CLINIC_LOCATION,
@@ -24,7 +24,6 @@ export function ClinicLocation() {
   const locale = useLocale();
   const isHi = locale === 'hi';
   const t = useTranslations('clinicLocation');
-  const [loadMap, setLoadMap] = useState(false);
 
   return (
     <section id="clinic-location" className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
@@ -164,7 +163,7 @@ export function ClinicLocation() {
 
           {/* Right Column: Interactive Map & Travel Guide (6 cols) */}
           <div className="lg:col-span-6 space-y-6">
-            {/* Click-to-Load Lazy Google Map */}
+            {/* Interactive Google Map */}
             <div className="bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs">
               <div className="p-4 sm:p-5 border-b border-[#F0EBE1] flex items-center justify-between">
                 <div>
@@ -187,39 +186,18 @@ export function ClinicLocation() {
               </div>
 
               <div className="relative aspect-[16/10] bg-[#E2E8F0] w-full flex items-center justify-center">
-                {loadMap ? (
-                  <iframe
-                    title="Dr Gaurav Sharma Clinic Location Map"
-                    src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                      'Satyam Complex Sector 12A Sikandra Agra'
-                    )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
-                    width="100%"
-                    height="100%"
-                    className="border-0 w-full h-full"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="text-center p-6 space-y-3">
-                    <div className="w-12 h-12 rounded-full bg-[#0F2744] text-white flex items-center justify-center mx-auto shadow-md">
-                      <MapPin className="w-6 h-6 text-[#38BDF8]" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sm text-[#0F2744]">
-                        {t('clickLoadMap')}
-                      </p>
-                      <p className="text-xs text-[#64748B] mt-0.5">
-                        {t('mapDataNotice')}
-                      </p>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => setLoadMap(true)}
-                      className="px-5 py-2.5 rounded-full bg-[#0F2744] text-white text-xs font-semibold hover:bg-[#16365D] transition-colors shadow-xs cursor-pointer"
-                    >
-                      {t('loadMapView')}
-                    </button>
-                  </div>
-                )}
+                <iframe
+                  title="Dr Gaurav Sharma Clinic Location Map"
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(
+                    'Satyam Complex Sector 12A Sikandra Agra'
+                  )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+                  width="100%"
+                  height="100%"
+                  className="border-0 w-full h-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
               </div>
             </div>
 
