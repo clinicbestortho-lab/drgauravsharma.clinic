@@ -73,9 +73,14 @@ export interface ClinicLocation {
 export interface ClinicContact {
   primaryPhone: string;
   displayPhone: string;
+  emergencyPhone: string;
+  displayEmergencyPhone: string;
   whatsappNumber: string;
   whatsappPrefill: string;
+  emergencyWhatsappPrefill: string;
+  hindiEmergencyWhatsappPrefill: string;
   emergencyDepartmentNotice: string;
+  hindiEmergencyDepartmentNotice: string;
 }
 
 export interface ClinicSocials {
@@ -235,11 +240,19 @@ export const CLINIC_TIMINGS: ClinicTimingSession[] = [
 export const CLINIC_CONTACT: ClinicContact = {
   primaryPhone: '+919760230687',
   displayPhone: '+91 97602 30687',
+  emergencyPhone: '+919760230687',
+  displayEmergencyPhone: '+91 97602 30687',
   whatsappNumber: '+919760230687',
   whatsappPrefill:
     'Hello Dr. Gaurav Sharma Clinic, I would like to enquire about an orthopaedic consultation.',
+  emergencyWhatsappPrefill:
+    'Emergency Trauma / Fracture Enquiry: Hello Dr. Gaurav Sharma Clinic, I need urgent assistance regarding an acute injury/fracture.',
+  hindiEmergencyWhatsappPrefill:
+    'आपातकालीन फ्रैक्चर / चोट: नमस्ते डॉ. गौरव शर्मा क्लिनिक, मुझे अचानक चोट/फ्रैक्चर के आपातकालीन परामर्श हेतु त्वरित सहायता चाहिए।',
   emergencyDepartmentNotice:
-    'NOTICE: Outpatient clinic appointments do not replace emergency casualty services. Patients experiencing high-velocity trauma, compound fractures with open skin lacerations, profuse bleeding, or acute neurological deficits must report immediately to the nearest tertiary trauma emergency department.',
+    'Emergency & Acute Trauma Care: Dr. Gaurav Sharma provides rapid evaluation, urgent plaster immobilization/splinting, and 24/7 surgical admission facilitation at empanelled hospital partners in Agra for acute bone fractures, joint dislocations, and post-fall injuries. For life-threatening multi-organ collapse or severe head injury with unconsciousness, immediate transfer to a tertiary multi-specialty trauma ICU is advised alongside orthopaedic coordination.',
+  hindiEmergencyDepartmentNotice:
+    'आपातकालीन फ्रैक्चर एवं तीव्र ट्रॉमा सेवा: डॉ. गौरव शर्मा अचानक हड्डी टूटने (फ्रैक्चर), जोड़ उतरने (डिसलोकेशन) एवं गिरने से आई चोटों में त्वरित क्लिनिकल परीक्षण, तात्कालिक प्लास्टर/स्प्लिंट स्थिरीकरण तथा आगरा के संबद्ध 24 घंटे खुले अस्पतालों में आपातकालीन ऑपरेशन व भर्ती की त्वरित सुविधा प्रदान करते हैं। सिर की गंभीर चोट या बेहोशी जैसी जीवन-रक्षक स्थितियों में मल्टी-स्पेशलिटी ट्रॉमा आईसीयू में भी तुरंत संपर्क करने की सलाह दी जाती है।',
 };
 
 export const CLINIC_SOCIALS: ClinicSocials = {

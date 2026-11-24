@@ -139,12 +139,12 @@ export const FAQS: FaqItem[] = [
   {
     id: 'faq-emergency-care',
     category: 'General',
-    question: 'Does the clinic handle acute emergency accident trauma at night?',
-    hindiQuestion: 'क्या क्लिनिक में रात में आपातकालीन दुर्घटना सेवाएं उपलब्ध हैं?',
+    question: 'How does Dr. Gaurav Sharma manage acute emergency fractures and sudden trauma?',
+    hindiQuestion: 'अचानक हड्डी टूटने (फ्रैक्चर) या गंभीर चोट लगने पर आपातकालीन उपचार कैसे प्राप्त करें?',
     answer:
-      'No. The clinic operates scheduled outpatient consultations. Patients suffering high-velocity road accidents, compound fractures with open bleeding wounds, or acute head/spine trauma should report directly to a 24-hour tertiary hospital trauma emergency unit.',
+      'For acute orthopaedic trauma—including sudden bone fractures, joint dislocations, severe falls, sports tears, or locked joints—patients can immediately contact our 24/7 emergency helpline (+91 97602 30687) or send X-rays on WhatsApp. Dr. Gaurav Sharma provides rapid clinical evaluation, urgent plaster immobilization/splinting, and seamless emergency admission at empanelled 24-hour surgical partner hospitals in Agra for priority surgical fixation (ORIF, interlocking nailing, or joint reduction). For multi-organ trauma or severe head injury, immediate tertiary trauma ICU stabilization is advised alongside orthopaedic care.',
     hindiAnswer:
-      'हमारा क्लिनिक निर्धारित ओपीडी परामर्श सेवा प्रदान करता है। गंभीर सड़क दुर्घटनाओं, अत्यधिक रक्तस्राव या खुले फ्रैक्चर के मामलों में तुरंत नजदीकी बड़े ट्रॉमा इमरजेंसी केंद्र में जाना चाहिए।',
+      'अचानक हड्डी टूटने (फ्रैक्चर), जोड़ उतरने (डिसलोकेशन), गिरने से आई चोट या गंभीर लिगामेंट टियर की स्थिति में आप सीधे हमारी 24/7 आपातकालीन हेल्पलाइन (+91 97602 30687) पर कॉल कर सकते हैं या व्हाट्सएप पर एक्स-रे भेज सकते हैं। डॉ. गौरव शर्मा तत्काल क्लिनिकल परीक्षण, तात्कालिक प्लास्टर/स्प्लिंट स्थिरीकरण एवं आगरा के संबद्ध 24 घंटे खुले सर्जिकल अस्पतालों में तत्काल ऑपरेशन व भर्ती की त्वरित सुविधा प्रदान करते हैं। सिर की गंभीर चोट जैसी गैर-हड्डी जीवन-रक्षक स्थितियों में मल्टी-स्पेशलिटी ट्रॉमा आईसीयू में भी तुरंत संपर्क करने की सलाह दी जाती है।',
     doctorReviewFlag: false,
   },
   {

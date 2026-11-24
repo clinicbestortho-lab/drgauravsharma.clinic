@@ -21,6 +21,7 @@ import {
   AlertTriangle,
   ArrowUpRight,
   ExternalLink,
+  PhoneCall,
 } from 'lucide-react';
 
 export function Footer() {
@@ -33,27 +34,39 @@ export function Footer() {
     <footer className="bg-[#0A1828] text-[#E2E8F0] border-t border-[#162C46] pt-16 pb-28 lg:pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Emergency Alert Banner Link */}
-        <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-[#EF4444]/10 border border-[#EF4444]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="mb-12 p-4 sm:p-5 rounded-2xl bg-red-950/40 border border-red-500/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-start sm:items-center gap-3">
-            <div className="p-2 rounded-lg bg-[#EF4444]/20 text-[#FCA5A5] shrink-0 mt-0.5 sm:mt-0">
-              <AlertTriangle className="w-5 h-5 text-[#EF4444]" />
+            <div className="p-2.5 rounded-xl bg-red-500/20 text-red-400 shrink-0 mt-0.5 sm:mt-0">
+              <AlertTriangle className="w-5 h-5 text-red-400 animate-pulse" />
             </div>
             <div>
-              <p className="font-semibold text-white text-sm sm:text-base">
-                {t('emergencyTitle')}
+              <p className="font-semibold text-white text-sm sm:text-base flex items-center gap-2">
+                <span>{t('emergencyTitle')}</span>
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/20 text-red-300 font-bold uppercase tracking-wider">
+                  24/7
+                </span>
               </p>
-              <p className="text-xs sm:text-sm text-[#CBD5E1]">
+              <p className="text-xs sm:text-sm text-gray-300">
                 {t('emergencySubtitle')}
               </p>
             </div>
           </div>
-          <Link
-            href={`/${locale}/contact#emergency`}
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#FCA5A5] hover:text-white underline underline-offset-4 shrink-0"
-          >
-            {t('emergencyLink')}
-            <ArrowUpRight className="w-4 h-4" />
-          </Link>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href={`tel:${CLINIC_CONTACT.primaryPhone}`}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs sm:text-sm font-bold shadow-md transition-all active:scale-[0.98]"
+            >
+              <PhoneCall className="w-3.5 h-3.5" />
+              <span>{CLINIC_CONTACT.displayPhone}</span>
+            </a>
+            <Link
+              href={`/${locale}/contact#emergency`}
+              className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-red-300 hover:text-white underline underline-offset-4"
+            >
+              <span>{t('emergencyLink')}</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#1E3A5F]">

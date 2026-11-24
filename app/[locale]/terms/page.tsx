@@ -60,12 +60,13 @@ export default function TermsPage() {
 
           <section className="space-y-2">
             <h2 className="font-serif text-xl font-bold text-[#0F2744]">
-              3. Emergency Trauma Limitation
+              3. Emergency Trauma Protocol & Online Form Limitation
             </h2>
             <p>
-              This website and its booking forms are strictly for scheduled outpatient outpatient services.
-              They must NOT be used for acute emergencies, major accident trauma, compound fractures, or
-              uncontrolled bleeding.
+              Online appointment booking forms on this website are designed for scheduled outpatient evaluations
+              and must not be relied upon as the sole communication channel during acute emergencies. In cases of
+              sudden fractures, joint dislocations, or severe trauma, attendants should directly contact the clinic
+              emergency helpline (+91 97602 30687) for immediate surgical coordination or proceed to an emergency trauma facility.
             </p>
           </section>
 
