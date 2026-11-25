@@ -165,9 +165,15 @@ export function SurgeriesSection({ asH1 = false }: { asH1?: boolean } = {}) {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F2744] leading-snug">
-                      {isHi && surgery.hindiTitle ? surgery.hindiTitle : surgery.title}
-                    </h3>
+                    {asH1 ? (
+                      <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#0F2744] leading-snug">
+                        {isHi && surgery.hindiTitle ? surgery.hindiTitle : surgery.title}
+                      </h2>
+                    ) : (
+                      <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#0F2744] leading-snug">
+                        {isHi && surgery.hindiTitle ? surgery.hindiTitle : surgery.title}
+                      </h3>
+                    )}
 
                     {/* Summary */}
                     <p className="text-sm text-[#475569] mt-3 leading-relaxed">

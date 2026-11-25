@@ -73,9 +73,9 @@ export default async function ContactPage({
             <div className="w-10 h-10 rounded-2xl bg-[#0F2744]/8 text-[#0F2744] flex items-center justify-center">
               <Phone className="w-5 h-5 text-[#0D7E8A]" />
             </div>
-            <h3 className="font-serif font-bold text-lg text-[#0F2744]">
+            <h2 className="font-serif font-bold text-lg text-[#0F2744]">
               {isHi ? 'रिसेप्शन पर कॉल करें' : 'Call Reception'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#566474]">
               {isHi ? 'सीधी पूछताछ एवं मौखिक समय पुष्टि' : 'Direct inquiries & verbal slot confirmation'}
             </p>
@@ -91,9 +91,9 @@ export default async function ContactPage({
             <div className="w-10 h-10 rounded-2xl bg-[#25D366]/15 text-[#075E54] flex items-center justify-center">
               <MessageSquare className="w-5 h-5 text-[#25D366]" />
             </div>
-            <h3 className="font-serif font-bold text-lg text-[#0F2744]">
+            <h2 className="font-serif font-bold text-lg text-[#0F2744]">
               {isHi ? 'व्हाट्सएप डेस्क' : 'WhatsApp Desk'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#566474]">
               {isHi ? 'अपॉइंटमेंट बुकिंग हेतु सीधा संदेश भेजें' : 'Message for consultation scheduling'}
             </p>
@@ -115,9 +115,9 @@ export default async function ContactPage({
             <div className="w-10 h-10 rounded-2xl bg-[#C28E38]/15 text-[#C28E38] flex items-center justify-center">
               <Clock className="w-5 h-5" />
             </div>
-            <h3 className="font-serif font-bold text-lg text-[#0F2744]">
+            <h2 className="font-serif font-bold text-lg text-[#0F2744]">
               {isHi ? 'ओपीडी परामर्श समय' : 'OPD Hours'}
-            </h3>
+            </h2>
             <p className="text-xs text-[#566474]">
               {isHi
                 ? 'सोम–शनि: सुबह 9:30–दोपहर 4:00 एवं शाम 6:00–रात 9:30'

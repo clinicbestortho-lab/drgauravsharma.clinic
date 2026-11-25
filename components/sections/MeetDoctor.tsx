@@ -187,9 +187,9 @@ export function MeetDoctor() {
             {/* Key Clinical Focus Areas */}
             <Reveal direction="up" distance={20} delay={0.3}>
               <div className="pt-2">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F2744] mb-3">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#0F2744] mb-3">
                   {t('keyFocusHeading')}
-                </h4>
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {focusAreas.map((area, idx) => (
                     <div

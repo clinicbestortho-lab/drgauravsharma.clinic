@@ -105,9 +105,15 @@ export function AreasOfCare({ asH1 = false }: { asH1?: boolean } = {}) {
                   </button>
                 </div>
 
-                <h3 className="font-serif text-xl font-bold text-[#0F2744] group-hover:text-[#0D7E8A] transition-colors leading-snug">
-                  {isHi ? area.hindiTitle : area.title}
-                </h3>
+                {asH1 ? (
+                  <h2 className="font-serif text-xl font-bold text-[#0F2744] group-hover:text-[#0D7E8A] transition-colors leading-snug">
+                    {isHi ? area.hindiTitle : area.title}
+                  </h2>
+                ) : (
+                  <h3 className="font-serif text-xl font-bold text-[#0F2744] group-hover:text-[#0D7E8A] transition-colors leading-snug">
+                    {isHi ? area.hindiTitle : area.title}
+                  </h3>
+                )}
                 {!isHi && (
                   <p className="text-xs text-[#7C8894] mt-0.5">
                     {area.hindiTitle}
