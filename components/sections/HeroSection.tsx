@@ -65,18 +65,16 @@ export function HeroSection() {
               <p className="text-base sm:text-lg text-[#4B5868] leading-relaxed max-w-2xl font-normal">
                 {isHi ? (
                   <>
-                    सिकंदरा, आगरा में{' '}
+                    <strong className="text-[#0F2744] font-semibold">डॉ. गौरव शर्मा ऑर्थोपेडिक क्लिनिक</strong> सिकंदरा, आगरा में{' '}
                     <strong className="text-[#0F2744] font-semibold">
                       {DOCTOR_PROFILE.hindiName || 'डॉ. गौरव शर्मा'}
                     </strong>{' '}
-                    (एम.एस. ऑर्थोपेडिक्स) द्वारा वरिष्ठ ऑर्थोपेडिक व जोड़ प्रत्यारोपण परामर्श। गहन शारीरिक जांच, पारदर्शी गैर-सर्जिकल व सर्जिकल विकल्प और सुरक्षित रिकवरी।
+                    (एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स, यूपीएमसी पंजी. 48757) द्वारा संचालित वरिष्ठ हड्डी एवं जोड़ प्रत्यारोपण केंद्र है, जहाँ 20+ वर्षों के अनुभव के साथ गहन शारीरिक जांच, गैर-सर्जिकल जोड़ संरक्षण (70%+ मरीज बिना सर्जरी के ठीक) व पारदर्शी उपचार को प्राथमिकता दी जाती है।
                   </>
                 ) : (
                   <>
-                    Consultant orthopaedic and joint replacement care in Sikandra, Agra by{' '}
-                    <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma</strong> (MS
-                    Orthopaedics). Structured around in-depth clinical examination,
-                    transparent non-surgical and surgical options, and measurable recovery milestones.
+                    <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma Orthopaedic Clinic</strong> is a consultant orthopaedic and joint replacement centre in Sikandra, Agra led by{' '}
+                    <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma</strong> (M.B.B.S., M.S. Orthopaedics, UPMC Reg. 48757) with 20+ years of surgical experience. Care is structured around hands-on clinical examination, non-surgical joint preservation (70%+ of patients), and measurable recovery milestones.
                   </>
                 )}
               </p>

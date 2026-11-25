@@ -52,6 +52,7 @@ export function buildMetadata({
     title: fullTitle,
     description,
     keywords: SEO_KEYWORDS,
+    authors: [{ name: 'Dr. Gaurav Sharma, M.B.B.S., M.S. (Orthopaedics)' }],
     metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: canonicalUrl,
@@ -59,6 +60,15 @@ export function buildMetadata({
         'en-IN': enUrl,
         'hi-IN': hiUrl,
       },
+      types: {
+        'application/rss+xml': `${SITE_URL}/feed.xml`,
+      },
+    },
+    other: {
+      'article:published_time': '2025-01-15T00:00:00+05:30',
+      'article:modified_time': '2026-11-25T00:00:00+05:30',
+      'last-modified': '2026-11-25',
+      'dc.date': '2026-11-25',
     },
     openGraph: {
       title: fullTitle,

@@ -48,7 +48,7 @@ export default async function SurgeriesIndexPage({
       </div>
 
       <div className="pt-4 pb-2">
-        <SurgeriesSection />
+        <SurgeriesSection asH1 />
       </div>
 
       <BookingCTA

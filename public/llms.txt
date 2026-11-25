@@ -46,11 +46,18 @@
 - Daycare Nerve & Tendon Decompressions: Carpal tunnel release and trigger finger release under local anesthesia (discharge in 2-3 hours).
 - De Quervain's Tenosynovitis Release: First dorsal extensor compartment decompression protecting the superficial radial nerve.
 
-## Dual-Language Patient Architecture
-- English Version: https://drgauravsharma.clinic/en
-- Hindi Version: https://drgauravsharma.clinic/hi
-- Both languages provide equal clinical depth, procedure guides, condition overviews, and appointment booking channels.
+## Key Pages & Navigation
+- [Home (English)](https://drgauravsharma.clinic/en) — Clinic overview, symptom explorer, and consultation booking
+- [Home (Hindi / हिन्दी)](https://drgauravsharma.clinic/hi) — Complete bilingual orthopaedic care in Hindi
+- [About Dr. Gaurav Sharma](https://drgauravsharma.clinic/en/about) — Clinical background and joint preservation philosophy
+- [Verified Credentials (UPMC 48757)](https://drgauravsharma.clinic/en/credentials) — Medical registration, M.B.B.S., M.S. (Orthopaedics), and academic tenure
+- [Areas of Care & Conditions](https://drgauravsharma.clinic/en/conditions) — Knee, hip, spine, shoulder, sports injuries, and fracture care
+- [Surgical Procedures Catalog](https://drgauravsharma.clinic/en/surgeries) — TKR, UKA, THR, ACL/PCL, arthroscopy, and trauma fixation
+- [Clinic Location & OPD Timings](https://drgauravsharma.clinic/en/clinic) — Satyam Complex, Sector-12A, Sikandra, Agra
+- [Patient FAQs](https://drgauravsharma.clinic/en/faq) — Direct clinical answers on consultations, X-rays, insurance, and recovery
+- [Book Consultation & Emergency Care](https://drgauravsharma.clinic/en/contact) — Outpatient booking and 24/7 acute trauma helpline
+- [RSS Clinical Feed](https://drgauravsharma.clinic/feed.xml) — Machine-readable updates for patient guides and procedures
 
 ## Full Extended Knowledge Base
 For procedural details, recovery timelines, and bilingual FAQs, see:
-https://drgauravsharma.clinic/llms-full.txt
+- [Full Clinical Knowledge Base (llms-full.txt)](https://drgauravsharma.clinic/llms-full.txt)

@@ -22,7 +22,7 @@ import { Button } from '../ui/Button';
 import { motion, AnimatePresence } from 'motion/react';
 import { EASE } from '@/lib/animations';
 
-export function AreasOfCare() {
+export function AreasOfCare({ asH1 = false }: { asH1?: boolean } = {}) {
   const locale = useLocale();
   const isHi = locale === 'hi';
   const t = useTranslations('areasOfCare');
@@ -62,9 +62,15 @@ export function AreasOfCare() {
             <span className="text-xs font-bold uppercase tracking-wider text-[#0D7E8A] block mb-2">
               {t('badge')}
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
-              {t('title')}
-            </h2>
+            {asH1 ? (
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
+                {t('title')}
+              </h1>
+            ) : (
+              <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
+                {t('title')}
+              </h2>
+            )}
             <p className="mt-3 text-base text-[#566474] leading-relaxed">
               {t('subtitle')}
             </p>

@@ -23,7 +23,7 @@ import { EASE } from '@/lib/animations';
 
 type FilterType = 'All' | SurgeryCategory;
 
-export function SurgeriesSection() {
+export function SurgeriesSection({ asH1 = false }: { asH1?: boolean } = {}) {
   const locale = useLocale();
   const isHi = locale === 'hi';
   const t = useTranslations('surgeries');
@@ -79,9 +79,15 @@ export function SurgeriesSection() {
             <ShieldCheck className="w-3.5 h-3.5 text-[#0D7E8A]" />
             <span>{t('badge')}</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
-            {t('title')}
-          </h2>
+          {asH1 ? (
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
+              {t('title')}
+            </h1>
+          ) : (
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#0F2744] tracking-tight">
+              {t('title')}
+            </h2>
+          )}
           <p className="mt-3 text-base sm:text-lg text-[#566474] leading-relaxed">
             {t('subtitle')}
           </p>

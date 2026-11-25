@@ -49,7 +49,7 @@ export default async function ConditionsIndexPage({
       </div>
 
       <div className="pt-2">
-        <AreasOfCare />
+        <AreasOfCare asH1 />
       </div>
 
       <div className="border-t border-[#EAE4D9]">
