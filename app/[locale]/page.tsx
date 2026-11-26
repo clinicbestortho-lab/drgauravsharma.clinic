@@ -27,7 +27,9 @@ export async function generateMetadata({
         ? 'वरिष्ठ हड्डी एवं जोड़ प्रत्यारोपण विशेषज्ञ सिकंदरा आगरा'
         : 'Consultant Orthopaedic & Joint Replacement Care | Sikandra, Agra',
     description:
-      'Consultant orthopaedic and joint replacement care in Sikandra, Agra by Dr. Gaurav Sharma (MS Orthopaedics, 20+ Yrs Exp). Structured around in-depth clinical examination, transparent options, and measurable recovery milestones.',
+      locale === 'hi'
+        ? 'सिकंदरा, आगरा में डॉ. गौरव शर्मा (एम.एस. ऑर्थोपेडिक्स, 20+ वर्ष सर्जिकल अनुभव) द्वारा टोटल नी रिप्लेसमेंट (TKR), हिप रिप्लेसमेंट (THR), आर्थ्रोस्कोपी (ACL/कंधा) व फ्रैक्चर सर्जरी।'
+        : 'Senior Orthopaedic & Joint Replacement Surgeon in Sikandra, Agra — Dr. Gaurav Sharma (MS Orthopaedics, 20+ Yrs Surgical Exp). Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL & Shoulder Surgery, Revision Arthroplasty, and Fracture Trauma Surgery.',
     locale: locale as 'en' | 'hi',
     path: '/',
   });

@@ -31,8 +31,8 @@ export async function generateMetadata({
       ? 'डॉ. गौरव शर्मा ऑर्थोपेडिक क्लिनिक | सिकंदरा, आगरा'
       : 'Dr. Gaurav Sharma Orthopaedic Clinic | Sikandra, Agra',
     description: isHi
-      ? 'सिकंदरा, आगरा में डॉ. गौरव शर्मा (एम.एस. ऑर्थोपेडिक्स, 20+ वर्ष अनुभव) द्वारा विशेषज्ञ हड्डी एवं जोड़ प्रत्यारोपण परामर्श। घुटना प्रत्यारोपण, आर्थ्रोस्कोपी, फ्रैक्चर उपचार एवं जोड़ संरक्षण।'
-      : 'Consultant orthopaedic and joint replacement care in Sikandra, Agra by Dr. Gaurav Sharma (MS Orthopaedics, 20+ Years Experience). Specializing in knee replacement, arthroscopy, fracture care, and joint preservation.',
+      ? 'सिकंदरा, आगरा में डॉ. गौरव शर्मा (एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स, 20+ वर्ष सर्जिकल अनुभव) द्वारा टोटल नी रिप्लेसमेंट (TKR), हिप रिप्लेसमेंट (THR), आर्थ्रोस्कोपी (ACL/कंधा), रिवीजन सर्जरी व फ्रैक्चर ट्रॉमा सर्जरी।'
+      : 'Senior Orthopaedic & Joint Replacement Surgeon in Sikandra, Agra — Dr. Gaurav Sharma (MS Orthopaedics, 20+ Years Surgical Experience). Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL/Shoulder Surgery, Revision Arthroplasty, and Fracture Trauma Care.',
     locale: locale as 'en' | 'hi',
   });
 }

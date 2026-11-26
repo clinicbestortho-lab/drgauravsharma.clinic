@@ -14,7 +14,7 @@ export const SITE_URL =
 export const SITE_NAME =
   'Dr. Gaurav Sharma Orthopaedic Clinic | Sikandra, Agra';
 export const DEFAULT_DESCRIPTION =
-  'Consultant orthopaedic and joint replacement care in Sikandra, Agra by Dr. Gaurav Sharma (MS Ortho, 20+ Yrs Exp). Specializing in knee replacement, arthroscopy, fracture care, and non-surgical joint preservation.';
+  'Senior Orthopaedic & Joint Replacement Surgeon in Sikandra, Agra — Dr. Gaurav Sharma (MBBS, MS Orthopaedics, Former Assistant Professor, 20+ Yrs Surgical Exp). Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL & Shoulder Surgery, Revision Arthroplasty, and 24/7 Fracture Trauma Surgery.';
 
 export const SEO_KEYWORDS = [
   'orthopaedic doctor in Agra',
@@ -130,6 +130,27 @@ export function getClinicJsonLd() {
       'SportsMedicine',
       'MusculoskeletalMedicine',
     ],
+    knowsAbout: [
+      'Total Knee Replacement (TKR)',
+      'Partial / Unicondylar Knee Replacement (UKA)',
+      'Total Hip Replacement (THR)',
+      'Complex & Revision Joint Replacement Surgery',
+      'Knee Arthroscopy & ACL / PCL Reconstruction',
+      'Shoulder Arthroscopy & Rotator Cuff Repair',
+      'Orthopaedic Fracture & Trauma Surgery (ORIF & Interlocking Nailing)',
+    ],
+    availableService: [
+      'Total Knee Replacement (TKR)',
+      'Partial / Unicondylar Knee Replacement (UKA)',
+      'Total Hip Replacement (THR)',
+      'Revision Knee & Hip Replacement Surgery',
+      'Arthroscopic ACL / PCL & Meniscus Surgery',
+      'Shoulder Arthroscopy & Rotator Cuff Repair',
+      'Complex Fracture Fixation (ORIF & Nailing)',
+    ].map((proc) => ({
+      '@type': 'SurgicalProcedure',
+      name: proc,
+    })),
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${CLINIC_LOCATION.addressLine1}, ${CLINIC_LOCATION.addressLine2}`,
@@ -206,10 +227,23 @@ export function getPhysicianJsonLd() {
       '@type': 'MedicalClinic',
       name: CLINIC_LOCATION.name,
     },
-    availableService: DOCTOR_PROFILE.focusAreas.map((area) => ({
-      '@type': 'MedicalTherapy',
-      name: area,
-    })),
+    availableService: [
+      ...[
+        'Total Knee Replacement (TKR)',
+        'Partial Knee Replacement (UKA)',
+        'Total Hip Replacement (THR)',
+        'Complex & Revision Joint Replacement',
+        'Knee & Shoulder Arthroscopy (ACL, Meniscus, Rotator Cuff)',
+        'Orthopaedic Trauma & Fracture Fixation Surgery',
+      ].map((proc) => ({
+        '@type': 'SurgicalProcedure',
+        name: proc,
+      })),
+      ...DOCTOR_PROFILE.focusAreas.map((area) => ({
+        '@type': 'MedicalTherapy',
+        name: area,
+      })),
+    ],
     identifier: [
       {
         '@type': 'PropertyValue',
