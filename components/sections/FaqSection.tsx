@@ -46,7 +46,7 @@ export function FaqSection({ limit }: { limit?: number }) {
   };
 
   return (
-    <section id="faqs" className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
+    <section id="faqs" className="py-14 md:py-20 bg-white border-b border-[#EAE4D9]">
       {/* FAQPage JSON-LD schema */}
       <script
         type="application/ld+json"

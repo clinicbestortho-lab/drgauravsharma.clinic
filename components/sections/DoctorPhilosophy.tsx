@@ -134,7 +134,7 @@ export function DoctorPhilosophy() {
     <section
       ref={containerRef}
       id="philosophy"
-      className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]"
+      className="py-14 md:py-20 bg-white border-b border-[#EAE4D9]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

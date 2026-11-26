@@ -378,7 +378,7 @@ export function SymptomNavigator() {
   return (
     <section
       id="symptom-navigator"
-      className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]"
+      className="py-14 md:py-20 bg-white border-b border-[#EAE4D9]"
     >
       {/* 
         Master In-DOM SVG Defs containing the high-resolution skeletal plates.

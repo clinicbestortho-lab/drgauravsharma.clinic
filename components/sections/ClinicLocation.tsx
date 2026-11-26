@@ -186,7 +186,7 @@ export function ClinicLocation() {
                 </a>
               </div>
 
-              <div className="relative aspect-[16/10] bg-[#E2E8F0] w-full flex items-center justify-center">
+              <div className="relative z-0 aspect-[16/10] bg-[#E2E8F0] w-full flex items-center justify-center overflow-hidden">
                 <iframe
                   title="Dr Gaurav Sharma Clinic Location Map"
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(
@@ -301,7 +301,7 @@ export function ClinicLocation() {
                 src: '/images/clinic/ot-hip-prosthesis.jpg',
                 title: t('gal3Title'),
                 desc: t('gal3Desc'),
-                pos: 'object-top',
+                pos: 'object-[50%_38%]',
               },
               {
                 src: '/images/clinic/c-arm-orif-fixation.jpg',
@@ -314,7 +314,7 @@ export function ClinicLocation() {
                 key={idx}
                 className="group rounded-2xl bg-white border border-[#E2DBD0] overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col"
               >
-                <div className="relative aspect-[4/3] bg-slate-900 overflow-hidden">
+                <div className="relative aspect-square bg-[#EAE4D9] overflow-hidden">
                   <Image
                     src={item.src}
                     alt={`${item.title} — ${item.desc}`}

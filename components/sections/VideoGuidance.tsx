@@ -25,7 +25,7 @@ export function VideoGuidance() {
   const [activeVideoId, setActiveVideoId] = useState<string | null>(null);
 
   return (
-    <section id="videos" className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
+    <section id="videos" className="py-14 md:py-20 bg-[#F4F8F9] border-b border-[#EAE4D9]">
       {/* VideoObject JSON-LD schemas */}
       {CLINIC_VIDEOS.map((video) => (
         <script
@@ -208,18 +208,20 @@ export function VideoGuidance() {
 
         {/* Authentic In-OT Hindi Clinical Awareness Clip */}
         <div className="mt-10 bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs grid grid-cols-1 lg:grid-cols-12 items-center">
-          <div className="lg:col-span-5 bg-[#0A1828] flex items-center justify-center p-4">
-            <video
-              controls
-              preload="metadata"
-              playsInline
-              poster="/images/clinic/ot-radiation-protection.jpg"
-              className="w-full max-h-[420px] rounded-2xl object-contain bg-black"
-            >
-              <source src="/videos/pediatric-fracture-ot-guide.mp4" type="video/mp4" />
-            </video>
+          <div className="lg:col-span-4 bg-[#0F2744]/5 flex items-center justify-center p-5 sm:p-6">
+            <div className="w-full max-w-[230px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg bg-slate-900 border border-[#E2DBD0]">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                poster="/images/clinic/ot-radiation-protection.jpg"
+                className="w-full h-full object-cover"
+              >
+                <source src="/videos/pediatric-fracture-ot-guide.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
-          <div className="lg:col-span-7 p-6 sm:p-8 space-y-4">
+          <div className="lg:col-span-8 p-6 sm:p-8 space-y-4">
             <Badge variant="teal" size="sm">
               {t('otClipBadge')}
             </Badge>

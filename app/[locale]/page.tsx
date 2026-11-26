@@ -56,8 +56,8 @@ export default function HomePage() {
       {/* 6. Areas of Care (Bento Grid) */}
       <AreasOfCare />
 
-      {/* 7. Surgical Procedures (The Showpiece) */}
-      <SurgeriesSection />
+      {/* 7. Surgical Procedures (Featured Preview on Home) */}
+      <SurgeriesSection limit={6} />
 
       {/* 8. Video Guidance (Hindi Lite-Embed) */}
       <VideoGuidance />

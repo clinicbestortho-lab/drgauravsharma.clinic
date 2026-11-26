@@ -48,16 +48,16 @@ export function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-[#FAF8F4]/95 backdrop-blur-md shadow-xs py-2.5 border-b border-[#E5DFD5]'
-            : 'bg-[#FAF8F4] py-3.5 border-b border-[#EAE4D9]'
+            ? 'bg-[#FAF8F4]/95 backdrop-blur-md shadow-xs py-2 border-b border-[#E5DFD5]'
+            : 'bg-[#FAF8F4] py-2.5 border-b border-[#EAE4D9]'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Logo & Doctor Title */}
-          <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-white border border-[#E2DBD0] overflow-hidden flex items-center justify-center p-0.5 shadow-xs group-hover:border-[#0D7E8A] transition-colors">
+          <Link href={`/${locale}`} className="flex items-center gap-2.5 group shrink-0">
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-white border border-[#E2DBD0] overflow-hidden flex items-center justify-center p-0.5 shadow-xs group-hover:border-[#0D7E8A] transition-colors shrink-0">
               <Image
                 src="/images/logo/logo-icon-square.png"
                 alt="Dr. Gaurav Sharma Orthopaedic Clinic Logo"
@@ -67,10 +67,10 @@ export function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-base md:text-lg text-[#0F2744] tracking-tight group-hover:text-[#0D7E8A] transition-colors leading-snug">
+              <span className="font-serif font-bold text-sm sm:text-base xl:text-lg text-[#0F2744] tracking-tight group-hover:text-[#0D7E8A] transition-colors leading-tight whitespace-nowrap">
                 {isHi && DOCTOR_PROFILE.hindiName ? DOCTOR_PROFILE.hindiName : DOCTOR_PROFILE.name}
               </span>
-              <span className="text-xs text-[#566474] font-medium tracking-tight">
+              <span className="text-[11px] text-[#566474] font-medium tracking-tight whitespace-nowrap hidden sm:block">
                 {isHi ? 'ऑर्थोपेडिक एवं जोड़ प्रत्यारोपण' : 'Orthopaedics & Joint Replacement'}
               </span>
             </div>
@@ -79,7 +79,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav
             aria-label="Main Navigation"
-            className="hidden lg:flex items-center gap-6 text-[15px] font-medium text-[#4B5563]"
+            className="hidden lg:flex items-center gap-4 xl:gap-6 text-[13.5px] xl:text-[15px] font-medium text-[#4B5563]"
           >
             {navLinks.map((link) => {
               const baseHref = link.href.split('#')[0];
@@ -92,7 +92,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition-colors hover:text-[#0F2744] relative py-1 ${
+                  className={`transition-colors hover:text-[#0F2744] relative py-1 whitespace-nowrap ${
                     isActive ? 'text-[#0F2744] font-semibold' : ''
                   }`}
                 >
@@ -109,17 +109,17 @@ export function Header() {
           </nav>
 
           {/* Action CTAs & Phone */}
-          <div className="hidden lg:flex items-center gap-3.5">
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3.5 shrink-0">
             <a
               href={`tel:${CLINIC_CONTACT.primaryPhone}`}
-              className="flex items-center gap-1.5 text-sm font-semibold text-[#0F2744] hover:text-[#0D7E8A] px-3 py-2 rounded-full hover:bg-black/5 transition-colors"
+              className="hidden xl:flex items-center gap-1.5 text-sm font-semibold text-[#0F2744] hover:text-[#0D7E8A] px-2.5 py-2 rounded-full hover:bg-black/5 transition-colors whitespace-nowrap"
             >
               <Phone className="w-4 h-4 text-[#0D7E8A]" />
               <span>{CLINIC_CONTACT.displayPhone}</span>
             </a>
 
-            <Button href={`/${locale}/contact`} variant="primary" size="sm" className="shadow-xs">
-              <Calendar className="w-3.5 h-3.5 mr-1" />
+            <Button href={`/${locale}/contact`} variant="primary" size="sm" className="shadow-xs whitespace-nowrap">
+              <Calendar className="w-3.5 h-3.5 mr-1 shrink-0" />
               {t('bookConsultation')}
             </Button>
           </div>
@@ -148,7 +148,7 @@ export function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed inset-0 top-[96px] z-30 bg-[#FAF8F4] overflow-y-auto px-6 py-8 flex flex-col justify-between border-t border-[#E5DFD5] lg:hidden"
+            className="fixed inset-0 top-[86px] z-40 bg-[#FAF8F4] overflow-y-auto px-6 py-8 flex flex-col justify-between border-t border-[#E5DFD5] lg:hidden"
           >
             <div className="space-y-4">
               <div className="pb-4 border-b border-[#E5DFD5]">

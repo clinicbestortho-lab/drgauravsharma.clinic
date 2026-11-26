@@ -23,7 +23,7 @@ import { EASE } from '@/lib/animations';
 
 type FilterType = 'All' | SurgeryCategory;
 
-export function SurgeriesSection({ asH1 = false }: { asH1?: boolean } = {}) {
+export function SurgeriesSection({ asH1 = false, limit }: { asH1?: boolean; limit?: number } = {}) {
   const locale = useLocale();
   const isHi = locale === 'hi';
   const t = useTranslations('surgeries');
@@ -62,16 +62,22 @@ export function SurgeriesSection({ asH1 = false }: { asH1?: boolean } = {}) {
   }, [t]);
 
   const filteredSurgeries = useMemo(() => {
-    if (activeCategory === 'All') return SURGERIES;
-    return SURGERIES.filter((s) => s.category === activeCategory);
-  }, [activeCategory]);
+    const base =
+      activeCategory === 'All'
+        ? SURGERIES
+        : SURGERIES.filter((s) => s.category === activeCategory);
+    if (limit && limit > 0 && activeCategory === 'All') {
+      return base.slice(0, limit);
+    }
+    return base;
+  }, [activeCategory, limit]);
 
   const toggleExpand = (slug: string) => {
     setExpandedSlug(expandedSlug === slug ? null : slug);
   };
 
   return (
-    <section id="surgeries" className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
+    <section id="surgeries" className="py-14 md:py-20 bg-white border-b border-[#EAE4D9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
@@ -316,8 +322,21 @@ export function SurgeriesSection({ asH1 = false }: { asH1?: boolean } = {}) {
           </AnimatePresence>
         </motion.div>
 
+        {limit && activeCategory === 'All' && SURGERIES.length > limit && (
+          <div className="mt-10 text-center">
+            <Button href={`/${locale}/surgeries`} variant="primary" size="lg" className="shadow-sm">
+              <span>
+                {isHi
+                  ? `सभी ${SURGERIES.length} सर्जिकल प्रक्रियाएं देखें`
+                  : `Explore All ${SURGERIES.length} Surgical Procedures`}
+              </span>
+              <ArrowRight className="w-4 h-4 ml-1.5" />
+            </Button>
+          </div>
+        )}
+
         {/* Surgery Closing Notice & Ethic Warning */}
-        <div className="mt-14">
+        <div className="mt-12">
           <ComplianceBanner showCta={true} ctaConcern="surgical-evaluation" />
         </div>
       </div>

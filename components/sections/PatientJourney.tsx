@@ -75,7 +75,7 @@ export function PatientJourney() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAF8F4] border-b border-[#EAE4D9]">
+    <section className="py-14 md:py-20 bg-white border-b border-[#EAE4D9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">

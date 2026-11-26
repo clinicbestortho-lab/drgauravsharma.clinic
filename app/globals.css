@@ -105,18 +105,20 @@ body {
               radial-gradient(circle at 50% 50%, rgba(15, 39, 68, 0.03) 0%, transparent 60%);
 }
 
-/* Clean scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
+/* Clean thin scrollbar on desktop only so mobile never shows edge gutter */
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #FAF8F4;
-}
+  ::-webkit-scrollbar-track {
+    background: #FAF8F4;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #CFD8DC;
-  border-radius: 5px;
+  ::-webkit-scrollbar-thumb {
+    background: #CFD8DC;
+    border-radius: 5px;
+  }
 }
 
 ::-webkit-scrollbar-thumb:hover {

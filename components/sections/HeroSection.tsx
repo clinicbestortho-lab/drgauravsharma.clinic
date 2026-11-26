@@ -33,18 +33,43 @@ export function HeroSection() {
   const t = useTranslations('hero');
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 md:pt-14 md:pb-24 bg-[#FAF8F4] hero-gradient-mesh border-b border-[#EAE4D9]">
+    <section className="relative overflow-hidden pt-5 pb-10 md:pt-8 md:pb-14 bg-[#FAF8F4] hero-gradient-mesh border-b border-[#EAE4D9]">
       {/* Decorative architectural background rings */}
       <div className="absolute top-10 right-5 md:right-20 w-72 h-72 rounded-full border border-[#0D7E8A]/10 pointer-events-none" />
       <div className="absolute top-24 right-16 md:right-32 w-96 h-96 rounded-full border border-[#C28E38]/10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Column: Clinical Positioning & CTAs (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-4 lg:space-y-5">
+            {/* Mobile-only Instant Doctor Identity Chip (guarantees face + trust above 844px fold) */}
+            <div className="lg:hidden flex items-center gap-3 p-2.5 rounded-2xl bg-white border border-[#E2DBD0] shadow-xs">
+              <div className="relative w-11 h-11 rounded-xl overflow-hidden shrink-0 border border-[#E2DBD0]">
+                <Image
+                  src="/images/doctor-portrait.jpg"
+                  alt={isHi ? 'डॉ. गौरव शर्मा' : 'Dr. Gaurav Sharma'}
+                  fill
+                  sizes="44px"
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-serif font-bold text-sm text-[#0F2744] truncate">
+                  {isHi ? DOCTOR_PROFILE.hindiName : DOCTOR_PROFILE.name}
+                </p>
+                <p className="text-[11px] text-[#475569] truncate">
+                  {isHi ? 'एम.एस. (ऑर्थोपेडिक्स) • 20+ वर्ष अनुभव' : 'MS (Orthopaedics) • 20+ Yrs Exp • UPMC 48757'}
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                OPD
+              </span>
+            </div>
+
             <Reveal direction="down" distance={16} delay={0.05}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F2744]/8 border border-[#0F2744]/15 text-[#0F2744] text-xs font-semibold tracking-wide">
-                <Award className="w-3.5 h-3.5 text-[#C28E38]" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0F2744]/8 border border-[#0F2744]/15 text-[#0F2744] text-[11px] sm:text-xs font-semibold tracking-wide">
+                <Award className="w-3.5 h-3.5 text-[#C28E38] shrink-0" />
                 <span>
                   {isHi
                     ? 'वरिष्ठ ऑर्थोपेडिक एवं जोड़ प्रत्यारोपण विशेषज्ञ • सिकंदरा, आगरा'
@@ -54,7 +79,7 @@ export function HeroSection() {
             </Reveal>
 
             <Reveal direction="up" distance={20} delay={0.15}>
-              <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#0F2744] leading-[1.14] tracking-tight">
+              <h1 className="font-serif text-[28px] sm:text-4xl lg:text-[46px] xl:text-[52px] font-bold text-[#0F2744] leading-[1.12] tracking-tight">
                 {isHi
                   ? 'आपकी गतिशीलता व रिकवरी को समर्पित ऑर्थोपेडिक देखभाल।'
                   : 'Orthopaedic Care, Built Around Your Recovery.'}
@@ -62,7 +87,7 @@ export function HeroSection() {
             </Reveal>
 
             <Reveal direction="up" distance={20} delay={0.25}>
-              <p className="text-base sm:text-lg text-[#4B5868] leading-relaxed max-w-2xl font-normal">
+              <p className="text-sm sm:text-base lg:text-[17px] text-[#4B5868] leading-relaxed max-w-2xl font-normal">
                 {isHi ? (
                   <>
                     <strong className="text-[#0F2744] font-semibold">डॉ. गौरव शर्मा ऑर्थोपेडिक क्लिनिक</strong> सिकंदरा, आगरा में{' '}
@@ -108,12 +133,12 @@ export function HeroSection() {
 
             {/* Trust Stats Bar with CountUp */}
             <Reveal direction="up" distance={24} delay={0.45}>
-              <div className="pt-8 border-t border-[#E5DFD5] grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div className="pt-5 border-t border-[#E5DFD5] grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
                 <div>
                   <div className="text-2xl sm:text-3xl font-serif font-bold text-[#0F2744]">
                     <CountUp end={20} suffix="+" />
                   </div>
-                  <div className="text-xs font-medium text-[#566474] mt-0.5">
+                  <div className="text-xs font-medium text-[#475569] mt-0.5">
                     {isHi ? 'वर्षों का सर्जिकल अनुभव' : 'Years Surgical Experience'}
                   </div>
                 </div>
@@ -122,7 +147,7 @@ export function HeroSection() {
                   <div className="text-2xl sm:text-3xl font-serif font-bold text-[#0D7E8A] flex items-center">
                     <span>UPMC</span>
                   </div>
-                  <div className="text-xs font-medium text-[#566474] mt-0.5">
+                  <div className="text-xs font-medium text-[#475569] mt-0.5">
                     {isHi ? 'पंजी. 48757 विशेषज्ञ' : 'Reg. 48757 Specialist'}
                   </div>
                 </div>
@@ -131,7 +156,7 @@ export function HeroSection() {
                   <div className="text-2xl sm:text-3xl font-serif font-bold text-[#0F2744]">
                     <span>{isHi ? 'सिकंदरा' : 'Sikandra'}</span>
                   </div>
-                  <div className="text-xs font-medium text-[#566474] mt-0.5">
+                  <div className="text-xs font-medium text-[#475569] mt-0.5">
                     {isHi ? 'सत्यम कॉम्प्लेक्स, आगरा' : 'Satyam Complex, Sector-12A'}
                   </div>
                 </div>
@@ -140,7 +165,7 @@ export function HeroSection() {
                   <div className="text-2xl sm:text-3xl font-serif font-bold text-[#C28E38]">
                     <span>{isHi ? 'मार्गदर्शिका' : 'Guides'}</span>
                   </div>
-                  <div className="text-xs font-medium text-[#566474] mt-0.5">
+                  <div className="text-xs font-medium text-[#475569] mt-0.5">
                     {isHi ? 'रोगी पुनर्वास व देखभाल' : 'Patient Rehab Education'}
                   </div>
                 </div>
