@@ -226,6 +226,43 @@ export function ClinicLocation() {
                 ))}
               </div>
 
+              {/* Regional ~150km Corridor & Outstation Pre-Travel Check */}
+              <div className="pt-4 border-t border-[#F0EBE1] space-y-3">
+                <h5 className="text-xs font-bold uppercase tracking-wider text-[#0F2744] flex items-center gap-1.5">
+                  <Navigation className="w-3.5 h-3.5 text-[#0D7E8A]" />
+                  <span>{t('outstationTitle')}</span>
+                </h5>
+                <p className="text-xs text-[#475569] leading-relaxed">
+                  {t('outstationDesc')}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {(isHi && CLINIC_LOCATION.hindiRegionalDistrictsServed
+                    ? CLINIC_LOCATION.hindiRegionalDistrictsServed
+                    : CLINIC_LOCATION.regionalDistrictsServed
+                  ).map((city, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2.5 py-1 rounded-full bg-[#0F2744]/5 border border-[#0F2744]/10 text-[11px] font-medium text-[#0F2744]"
+                    >
+                      {city}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={`https://wa.me/${CLINIC_CONTACT.whatsappNumber}?text=${encodeURIComponent(
+                    isHi
+                      ? 'नमस्ते डॉ. गौरव शर्मा क्लिनिक, मैं आगरा के बाहर से आ रहा/रही हूँ। कृपया मेरे परामर्श समय व रिपोर्ट जांच हेतु मार्गदर्शन करें।'
+                      : 'Hello Dr. Gaurav Sharma Clinic, I am planning to travel from outside Agra for a consultation. Could you please confirm OPD slot availability before I travel?'
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#0D7E8A]/10 hover:bg-[#0D7E8A]/15 text-[#095962] border border-[#0D7E8A]/25 text-xs font-semibold transition-colors"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 text-[#0D7E8A]" />
+                  <span>{t('outstationCta')}</span>
+                </a>
+              </div>
+
               <div className="pt-2 text-xs text-[#64748B] leading-relaxed border-t border-[#F0EBE1]">
                 <strong className="text-[#1A2530]">{t('transitTip')}</strong>{' '}
                 {t('transitTipText')}

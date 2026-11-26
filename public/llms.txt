@@ -14,7 +14,8 @@
 - Landmark: Opposite Hotel Bhawna Clarks Inn, adjacent to Paras Pearls Mall
 - Geolocation: 27.2045 N, 77.9547 E
 - Google Business Profile: https://share.google/ggZ6xfMlJq1ZPwulT
-- Localities Served: Sikandra, Bodla, Dayalbagh, Avas Vikas Colony, Runakta, Kamla Nagar, Shahganj, Khandari, Agra Cantt, Mathura Road Corridor, and Western Uttar Pradesh
+- Localities Served (Agra): Sikandra, Bodla, Dayalbagh, Avas Vikas Colony, Runakta, Kamla Nagar, Shahganj, Khandari, Agra Cantt, Mathura Road Corridor
+- Regional Catchment (~150 km Radius via NH-19 & ISBT Agra): Mathura & Vrindavan, Firozabad & Shikohabad, Hathras, Aligarh, Etah & Kasganj, Mainpuri, Tundla, Bharatpur (Rajasthan), Dholpur (Rajasthan), and Morena (Madhya Pradesh) — with same-day X-ray/MRI film reviews and pre-travel WhatsApp slot confirmation for outstation patients
 
 ## Outpatient (OPD) Hours & Access
 - Days: Monday through Saturday

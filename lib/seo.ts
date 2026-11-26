@@ -25,7 +25,8 @@ export const SEO_KEYWORDS = [
   'fracture clinic Sikandra',
   'joint pain specialist Agra',
   'Dr Gaurav Sharma orthopaedic surgeon',
-  'best orthopaedic clinic Agra',
+  'orthopaedic surgeon near Mathura Firozabad Hathras',
+  'knee replacement surgeon Aligarh Bharatpur Dholpur',
   'hip replacement surgeon Agra',
   'sports injury specialist Agra',
   'orthopaedic doctor Bodla Dayalbagh',
@@ -205,10 +206,25 @@ export function getClinicJsonLd() {
         closes: '14:00',
       },
     ],
-    areaServed: CLINIC_LOCATION.localitiesServed.map((loc) => ({
-      '@type': 'AdministrativeArea',
-      name: `${loc}, Agra`,
-    })),
+    areaServed: [
+      {
+        '@type': 'GeoCircle',
+        geoMidpoint: {
+          '@type': 'GeoCoordinates',
+          latitude: CLINIC_LOCATION.geo.latitude,
+          longitude: CLINIC_LOCATION.geo.longitude,
+        },
+        geoRadius: '150000',
+      },
+      ...CLINIC_LOCATION.localitiesServed.map((loc) => ({
+        '@type': 'AdministrativeArea',
+        name: `${loc}, Agra`,
+      })),
+      ...CLINIC_LOCATION.regionalDistrictsServed.map((city) => ({
+        '@type': 'City',
+        name: city,
+      })),
+    ],
   };
 }
 

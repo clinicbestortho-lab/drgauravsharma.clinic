@@ -264,7 +264,10 @@
     "visitingTitle": "Visiting from Agra & Surrounding Localities",
     "visitingIntro": "The clinic is readily accessible by auto-rickshaw, cab, or private vehicle from all major residential and commercial sectors in Agra:",
     "transitTip": "Transit Landmark Tip:",
-    "transitTipText": "When approaching via the Sikandra-Bodla road, look for Paras Pearls Mall. Satyam Complex is immediately adjacent, opposite Hotel Bhawna Clarks Inn. Ample roadside parking is available."
+    "transitTipText": "When approaching via the Sikandra-Bodla road, look for Paras Pearls Mall. Satyam Complex is immediately adjacent, opposite Hotel Bhawna Clarks Inn. Ample roadside parking is available.",
+    "outstationTitle": "Outstation Patients (Within ~150 km Highway Corridor)",
+    "outstationDesc": "Located near the NH-19 Sikandra gateway & ISBT Agra, families regularly visit from surrounding districts for same-day X-ray/MRI film reviews, unbiased surgical second opinions, and planned joint replacements—without long metro commutes.",
+    "outstationCta": "WhatsApp X-Ray / Confirm Slot Before Travel"
   },
   "faq": {
     "badge": "Patient Questions",

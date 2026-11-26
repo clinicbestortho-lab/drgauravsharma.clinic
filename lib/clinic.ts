@@ -68,6 +68,8 @@ export interface ClinicLocation {
   googleBusinessProfileUrl: string;
   localitiesServed: string[];
   hindiLocalitiesServed?: string[];
+  regionalDistrictsServed: string[];
+  hindiRegionalDistrictsServed?: string[];
 }
 
 export interface ClinicContact {
@@ -195,6 +197,30 @@ export const CLINIC_LOCATION: ClinicLocation = {
     'खंदारी',
     'आगरा कैंट',
     'मथुरा रोड कॉरिडोर',
+  ],
+  regionalDistrictsServed: [
+    'Mathura & Vrindavan',
+    'Firozabad & Shikohabad',
+    'Hathras',
+    'Aligarh',
+    'Etah & Kasganj',
+    'Mainpuri',
+    'Tundla',
+    'Bharatpur (RJ)',
+    'Dholpur (RJ)',
+    'Morena (MP)',
+  ],
+  hindiRegionalDistrictsServed: [
+    'मथुरा व वृंदावन',
+    'फिरोजाबाद व शिकोहाबाद',
+    'हाथरस',
+    'अलीगढ़',
+    'एटा व कासगंज',
+    'मैनपुरी',
+    'टूंडला',
+    'भरतपुर (राज.)',
+    'धौलपुर (राज.)',
+    'मुरैना (म.प्र.)',
   ],
 };
 
