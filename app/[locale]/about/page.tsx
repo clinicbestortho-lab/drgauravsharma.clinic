@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { DOCTOR_PROFILE } from '@/lib/clinic';
 import { buildMetadata } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -93,15 +94,42 @@ export default async function AboutPage({
 
       {/* Main Content */}
       <div id="doctor" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
-        {/* Detailed Biography */}
-        <section className="bg-white rounded-3xl border border-[#E2DBD0] p-6 sm:p-10 shadow-xs space-y-4">
-          <h2 className="font-serif text-2xl font-bold text-[#0F2744]">
-            {isHi ? 'चिकित्सीय पृष्ठभूमि एवं सर्जिकल अनुभव' : 'Clinical Background & Surgical Journey'}
-          </h2>
-          <div className="space-y-4 text-sm sm:text-base text-[#334155] leading-relaxed">
-            {bioParas.map((p, idx) => (
-              <p key={idx}>{p}</p>
-            ))}
+        {/* Detailed Biography + Real Viewbox Consultation Photo */}
+        <section className="bg-white rounded-3xl border border-[#E2DBD0] p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-7 space-y-4">
+              <h2 className="font-serif text-2xl font-bold text-[#0F2744]">
+                {isHi ? 'चिकित्सीय पृष्ठभूमि एवं सर्जिकल अनुभव' : 'Clinical Background & Surgical Journey'}
+              </h2>
+              <div className="space-y-4 text-sm sm:text-base text-[#334155] leading-relaxed">
+                {bioParas.map((p, idx) => (
+                  <p key={idx}>{p}</p>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="rounded-2xl overflow-hidden border border-[#E2DBD0] bg-[#FAF8F4] shadow-xs">
+                <div className="relative aspect-[16/10] bg-slate-900">
+                  <Image
+                    src="/images/clinic/viewbox-consultation.jpg"
+                    alt={
+                      isHi
+                        ? 'डॉ. गौरव शर्मा क्लिनिक में एक्स-रे व्यूबॉक्स और जोड़ों के मॉडल पर मरीज को समझाते हुए'
+                        : 'Dr. Gaurav Sharma reviewing X-rays on clinic viewbox with anatomical joint models'
+                    }
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 420px"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="p-3 text-xs text-[#566474] font-medium">
+                  {isHi
+                    ? 'सिकंदरा क्लिनिक में एक्स-रे व्यूबॉक्स और 3D एनाटॉमिकल मॉडल द्वारा प्रत्यक्ष परामर्श।'
+                    : 'Direct X-ray viewbox correlation and anatomical joint demonstration at our Sikandra clinic.'}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 

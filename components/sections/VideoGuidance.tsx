@@ -205,6 +205,42 @@ export function VideoGuidance() {
             );
           })}
         </div>
+
+        {/* Authentic In-OT Hindi Clinical Awareness Clip */}
+        <div className="mt-10 bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs grid grid-cols-1 lg:grid-cols-12 items-center">
+          <div className="lg:col-span-5 bg-[#0A1828] flex items-center justify-center p-4">
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              poster="/images/clinic/ot-radiation-protection.jpg"
+              className="w-full max-h-[420px] rounded-2xl object-contain bg-black"
+            >
+              <source src="/videos/pediatric-fracture-ot-guide.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="lg:col-span-7 p-6 sm:p-8 space-y-4">
+            <Badge variant="teal" size="sm">
+              {t('otClipBadge')}
+            </Badge>
+            <h3 className="font-serif text-2xl font-bold text-[#0F2744]">
+              {t('otClipTitle')}
+            </h3>
+            <p className="text-sm text-[#475569] leading-relaxed">
+              {t('otClipDesc')}
+            </p>
+            <div className="space-y-2 pt-2 border-t border-[#F0EBE1]">
+              <div className="flex items-start gap-2 text-xs sm:text-sm text-[#334155]">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span>{t('otClipPoint1')}</span>
+              </div>
+              <div className="flex items-start gap-2 text-xs sm:text-sm text-[#334155]">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <span>{t('otClipPoint2')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

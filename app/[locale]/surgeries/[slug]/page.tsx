@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { SURGERIES } from '@/content/surgeries';
 import { FAQS } from '@/content/faqs';
 import { buildMetadata, getMedicalProcedureJsonLd } from '@/lib/seo';
@@ -31,6 +32,72 @@ export function generateStaticParams() {
   });
   return params;
 }
+
+const SURGERY_VISUALS: Record<
+  string,
+  { src: string; enCaption: string; hiCaption: string; pos?: string }
+> = {
+  'total-hip-replacement': {
+    src: '/images/clinic/ot-hip-prosthesis.jpg',
+    enCaption: 'Dr. Gaurav Sharma in sterile OT attire with hip replacement prosthesis.',
+    hiCaption: 'ऑपरेशन थिएटर में हिप रिप्लेसमेंट प्रोस्थेसिस के साथ डॉ. गौरव शर्मा।',
+    pos: 'object-top',
+  },
+  'bipolar-hemiarthroplasty': {
+    src: '/images/clinic/ot-hip-prosthesis.jpg',
+    enCaption: 'Dr. Gaurav Sharma with bipolar hemiarthroplasty femoral head implant.',
+    hiCaption: 'बाइपोलर हेमीआर्थ्रोप्लास्टी हिप इम्प्लांट के साथ डॉ. गौरव शर्मा।',
+    pos: 'object-top',
+  },
+  'complex-revision-joint-replacement': {
+    src: '/images/clinic/ot-hip-prosthesis.jpg',
+    enCaption: 'Revision joint arthroplasty surgical instrumentation and implant readiness.',
+    hiCaption: 'रिवीजन जॉइंट रिप्लेसमेंट सर्जरी इम्प्लांट एवं स्टेराइल तैयारी।',
+    pos: 'object-top',
+  },
+  'total-knee-replacement': {
+    src: '/images/clinic/ot-sterile-instruments.jpg',
+    enCaption: 'Sterile knee arthroplasty surgical trays prepared under laminar OT lighting.',
+    hiCaption: 'टोटल नी रिप्लेसमेंट सर्जरी हेतु स्टेराइल ऑर्थोपेडिक उपकरण ट्रे।',
+    pos: 'object-center',
+  },
+  'partial-knee-replacement': {
+    src: '/images/clinic/ot-sterile-instruments.jpg',
+    enCaption: 'Precision unicondylar knee replacement instrumentation setup.',
+    hiCaption: 'पार्शियल नी रिप्लेसमेंट के लिए सटीक स्टेराइल सर्जिकल उपकरण।',
+    pos: 'object-center',
+  },
+  'intra-articular-fracture-orif': {
+    src: '/images/clinic/c-arm-orif-fixation.jpg',
+    enCaption: 'Intraoperative C-Arm fluoroscopy confirming titanium locking plate & screw fixation.',
+    hiCaption: 'सर्जरी के दौरान C-Arm एक्स-रे पर लॉकिंग प्लेट और स्क्रू फिक्सेशन की सटीक स्थिति।',
+    pos: 'object-center',
+  },
+  'closed-interlocking-nailing': {
+    src: '/images/clinic/ot-radiation-protection.jpg',
+    enCaption: 'Dr. Gaurav Sharma in C-Arm trauma theatre performing closed fracture nailing.',
+    hiCaption: 'C-Arm ट्रॉमा ओटी में क्लोज्ड इंटरलॉकिंग नेलिंग प्रक्रिया के दौरान डॉ. शर्मा।',
+    pos: 'object-top',
+  },
+  'knee-arthroscopy-acl-pcl': {
+    src: '/images/clinic/ot-precision-surgery.jpg',
+    enCaption: 'Dr. Gaurav Sharma performing precision orthopaedic surgery under OT lighting.',
+    hiCaption: 'ऑपरेशन थिएटर में सूक्ष्म ऑर्थोपेडिक सर्जरी करते हुए डॉ. गौरव शर्मा।',
+    pos: 'object-top',
+  },
+  'meniscus-repair-preservation': {
+    src: '/images/clinic/ot-precision-surgery.jpg',
+    enCaption: 'Tissue-preserving arthroscopic repair technique in sterile theatre.',
+    hiCaption: 'जोड़ व ऊतक संरक्षण केंद्रित सूक्ष्म सर्जिकल प्रक्रिया।',
+    pos: 'object-top',
+  },
+  'shoulder-arthroscopy-rotator-cuff': {
+    src: '/images/clinic/ot-precision-surgery.jpg',
+    enCaption: 'Focused surgical intervention in sterile orthopaedic operating room.',
+    hiCaption: 'स्टेराइल ऑर्थोपेडिक ऑपरेशन थिएटर में सटीक सर्जिकल देखभाल।',
+    pos: 'object-top',
+  },
+};
 
 export async function generateMetadata({
   params,
@@ -159,6 +226,37 @@ export default async function SurgeryDetailPage({
 
       {/* Main Content Body */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-12">
+        {SURGERY_VISUALS[surgery.slug] && (
+          <div className="bg-white rounded-3xl border border-[#E2DBD0] overflow-hidden shadow-xs grid grid-cols-1 md:grid-cols-12 items-center">
+            <div className="md:col-span-5 relative aspect-[4/3] bg-slate-900">
+              <Image
+                src={SURGERY_VISUALS[surgery.slug].src}
+                alt={
+                  isHi
+                    ? SURGERY_VISUALS[surgery.slug].hiCaption
+                    : SURGERY_VISUALS[surgery.slug].enCaption
+                }
+                fill
+                sizes="(max-width: 768px) 100vw, 420px"
+                className={`object-cover ${SURGERY_VISUALS[surgery.slug].pos || 'object-center'}`}
+              />
+            </div>
+            <div className="md:col-span-7 p-6 sm:p-8 space-y-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#0D7E8A] block">
+                {isHi ? 'वास्तविक ऑपरेशन थिएटर झलक' : 'Operative Theatre Proof'}
+              </span>
+              <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#0F2744]">
+                {displayShortTitle}
+              </h2>
+              <p className="text-sm text-[#475569] leading-relaxed">
+                {isHi
+                  ? SURGERY_VISUALS[surgery.slug].hiCaption
+                  : SURGERY_VISUALS[surgery.slug].enCaption}
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Section 1: Clinical Indication */}
         <section className="bg-white rounded-3xl border border-[#E2DBD0] p-6 sm:p-10 shadow-xs space-y-4">
           <div className="flex items-center gap-2.5">

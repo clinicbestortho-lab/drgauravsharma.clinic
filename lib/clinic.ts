@@ -289,7 +289,7 @@ export const CLINIC_SOCIALS: ClinicSocials = {
 };
 
 export const CLINIC_INSURANCE_NOTE =
-  'Outpatient (OPD) clinical consultations, in-clinic splinting, and diagnostic film evaluations are payable directly at the clinic reception. For surgical procedures requiring hospital admission, cashless Mediclaim & TPA pre-authorization assistance is facilitated through empanelled hospital partner desks. No upfront online booking charges apply.';
+  'In-person OPD consultations (₹500), in-clinic X-ray evaluations, and plaster splinting are handled at the Sikandra clinic desk. For inpatient joint replacement & trauma surgeries, cashless treatment under Ayushman Bharat (PM-JAY) and all major TPA health insurance panels is facilitated at empanelled partner hospitals.';
 
 export const COMPLIANCE_NOTICE =
   'NMC & Ethical Practice Notice: This digital platform serves exclusively for patient education, clinic scheduling transparency, and public orientation. In compliance with the National Medical Commission (NMC) professional conduct regulations, information presented here does not constitute a guaranteed clinical prognosis or commercial solicitation. Operative intervention is advised solely following in-person physical clinical examination, diagnostic film correlation (X-rays/MRI), and exhausting conservative avenues.';

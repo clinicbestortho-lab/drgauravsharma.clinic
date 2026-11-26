@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   CLINIC_LOCATION,
@@ -154,7 +155,7 @@ export function ClinicLocation() {
                 </h5>
                 <p className="text-xs sm:text-sm text-[#475569] mt-1 leading-relaxed">
                   {isHi
-                    ? 'अस्पताल में भर्ती प्रक्रिया, जोड़ प्रत्यारोपण एवं फ्रैक्चर सर्जरी हेतु सभी प्रमुख टीपीए (TPA) एवं कैशलेस स्वास्थ्य बीमा की सुविधा उपलब्ध है। क्लिनिक ओपीडी परामर्श में हमारे परामर्शदाता से बीमा संबंधी पूर्व-स्वीकृति (Pre-Auth) की जानकारी प्राप्त करें।'
+                    ? 'क्लिनिक ओपीडी परामर्श शुल्क ₹500 एवं इन-हाउस एक्स-रे की सुविधा उपलब्ध है। अस्पताल में भर्ती, जोड़ प्रत्यारोपण एवं फ्रैक्चर सर्जरी हेतु आयुष्मान भारत कार्ड (PM-JAY) व सभी प्रमुख टीपीए (TPA) कैशलेस स्वास्थ्य बीमा पैनलों की सुविधा संबद्ध अस्पतालों में उपलब्ध है।'
                     : CLINIC_INSURANCE_NOTE}
                 </p>
               </div>
@@ -268,6 +269,70 @@ export function ClinicLocation() {
                 {t('transitTipText')}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Real Clinic & Surgical Environment Gallery */}
+        <div className="mt-14 pt-12 border-t border-[#EAE4D9]">
+          <div className="max-w-2xl mb-8">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0F2744]">
+              {t('galleryTitle')}
+            </h3>
+            <p className="text-sm text-[#566474] mt-1.5">
+              {t('gallerySubtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                src: '/images/clinic/viewbox-consultation.jpg',
+                title: t('gal1Title'),
+                desc: t('gal1Desc'),
+                pos: 'object-center',
+              },
+              {
+                src: '/images/clinic/consultation-chamber.jpg',
+                title: t('gal2Title'),
+                desc: t('gal2Desc'),
+                pos: 'object-center',
+              },
+              {
+                src: '/images/clinic/ot-hip-prosthesis.jpg',
+                title: t('gal3Title'),
+                desc: t('gal3Desc'),
+                pos: 'object-top',
+              },
+              {
+                src: '/images/clinic/c-arm-orif-fixation.jpg',
+                title: t('gal4Title'),
+                desc: t('gal4Desc'),
+                pos: 'object-center',
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group rounded-2xl bg-white border border-[#E2DBD0] overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col"
+              >
+                <div className="relative aspect-[4/3] bg-slate-900 overflow-hidden">
+                  <Image
+                    src={item.src}
+                    alt={`${item.title} — ${item.desc}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className={`object-cover ${item.pos} group-hover:scale-105 transition-transform duration-500`}
+                  />
+                </div>
+                <div className="p-4 space-y-1 flex-1">
+                  <h4 className="font-serif font-bold text-sm text-[#0F2744]">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-[#566474] leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -214,7 +214,12 @@
     "facebookPosts": "Facebook Community Page",
     "keyTopics": "Key Clinical Topics Discussed",
     "watchYoutube": "Watch on YouTube",
-    "consultDoctor": "Consult Dr. Gaurav Sharma"
+    "consultDoctor": "Consult Dr. Gaurav Sharma",
+    "otClipBadge": "In-OT Case Insight (Hindi)",
+    "otClipTitle": "Timely Fracture Treatment in Children — OT Case Note",
+    "otClipDesc": "Dr. Gaurav Sharma explains in Hindi from the operating theatre why timely evaluation of childhood fractures prevents avoidable surgical complications.",
+    "otClipPoint1": "Do not delay proper orthopaedic X-ray assessment after childhood falls",
+    "otClipPoint2": "Avoid unscientific bone-setting or massage (malish) that displaces fractures"
   },
   "patientJourney": {
     "badge": "Clinical Protocol & Patient Flow",
@@ -267,7 +272,17 @@
     "transitTipText": "When approaching via the Sikandra-Bodla road, look for Paras Pearls Mall. Satyam Complex is immediately adjacent, opposite Hotel Bhawna Clarks Inn. Ample roadside parking is available.",
     "outstationTitle": "Outstation Patients (Within ~150 km Highway Corridor)",
     "outstationDesc": "Located near the NH-19 Sikandra gateway & ISBT Agra, families regularly visit from surrounding districts for same-day X-ray/MRI film reviews, unbiased surgical second opinions, and planned joint replacements—without long metro commutes.",
-    "outstationCta": "WhatsApp X-Ray / Confirm Slot Before Travel"
+    "outstationCta": "WhatsApp X-Ray / Confirm Slot Before Travel",
+    "galleryTitle": "Inside the Clinic & Operating Theatre",
+    "gallerySubtitle": "Authentic snapshots of clinical consultations, anatomical joint models, sterile surgical implants, and C-Arm fracture precision.",
+    "gal1Title": "X-Ray Viewbox & 3D Model Review",
+    "gal1Desc": "Every scan is explained physically alongside anatomical joint models.",
+    "gal2Title": "Consultation Chamber, Sikandra",
+    "gal2Desc": "Unhurried 1-on-1 clinical evaluation at Satyam Complex, Sector-12A.",
+    "gal3Title": "Joint Replacement & Surgical Implants",
+    "gal3Desc": "Dr. Sharma in sterile OT scrubs with biocompatible hip arthroplasty prosthesis.",
+    "gal4Title": "C-Arm Fluoroscopy Fracture Precision",
+    "gal4Desc": "Real-time intraoperative imaging confirming titanium locking-plate alignment."
   },
   "faq": {
     "badge": "Patient Questions",
