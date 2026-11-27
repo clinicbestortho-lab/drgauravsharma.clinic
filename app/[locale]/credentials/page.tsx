@@ -26,8 +26,8 @@ export async function generateMetadata({
         : 'Doctor Credentials & Medical Registration Verification | Dr. Gaurav Sharma',
     description:
       locale === 'hi'
-        ? 'डॉ. गौरव शर्मा के आधिकारिक चिकित्सा प्रमाण पत्र एवं डिग्रियां: यूपी मेडिकल काउंसिल पंजीकरण संख्या 48757, एम.एस. (हड्डी रोग), पूर्व असिस्टेंट प्रोफेसर।'
-        : 'Official credentials, medical registrations, and academic qualifications of Dr. Gaurav Sharma: UPMC Reg. No. 48757, MS (Orthopaedics), MBBS, Former Assistant Professor of Orthopaedics.',
+        ? 'डॉ. गौरव शर्मा के आधिकारिक चिकित्सा प्रमाण पत्र एवं डिग्रियां: यूपी मेडिकल काउंसिल पंजीकरण संख्या 48757, एम.बी.बी.एस. (SNMC आगरा), एम.एस. हड्डी रोग (MLB झांसी)।'
+        : 'Official credentials, medical registrations, and qualifications of Dr. Gaurav Sharma: UPMC Reg. No. 48757, MBBS (SNMC Agra), MS Orthopaedics (MLB Medical College Jhansi).',
     path: '/credentials',
     locale: locale as 'en' | 'hi',
   });
@@ -63,21 +63,21 @@ export default async function CredentialsPage({
         },
         {
           title: 'बैचलर ऑफ मेडिसिन एंड बैचलर ऑफ सर्जरी (M.B.B.S.)',
-          authority: 'मान्यता प्राप्त मेडिकल कॉलेज एवं विश्वविद्यालय',
+          authority: 'सरोजिनी नायडू मेडिकल कॉलेज (SNMC), आगरा',
           registrationNumber: 'प्राथमिक चिकित्सा डिग्री',
-          year: 'स्नातक उपाधि',
+          year: 'स्नातक उपाधि (2004)',
           icon: GraduationCap,
           details:
-            'अंडरग्रेजुएट मेडिकल डिग्री जिसमें आपातकालीन चिकित्सा, सामान्य सर्जरी, मस्कुलोस्केलेटल एनाटॉमी एवं आंतरिक चिकित्सा का व्यापक क्लिनिकल प्रशिक्षण सम्मिलित है।',
+            'सरोजिनी नायडू मेडिकल कॉलेज, आगरा से एम.बी.बी.एस. की उपाधि, जिसमें आपातकालीन चिकित्सा, सामान्य सर्जरी, मस्कुलोस्केलेटल एनाटॉमी एवं आंतरिक चिकित्सा का व्यापक क्लिनिकल प्रशिक्षण सम्मिलित है।',
         },
         {
-          title: 'पूर्व असिस्टेंट प्रोफेसर (हड्डी एवं जोड़ रोग विभाग)',
-          authority: 'मेडिकल शिक्षण संस्थान',
-          registrationNumber: 'अकादमिक फैकल्टी शिक्षण कार्यकाल',
-          year: 'फैकल्टी अनुभव',
-          icon: Building2,
+          title: 'मास्टर ऑफ सर्जरी — एम.एस. (ऑर्थोपेडिक्स)',
+          authority: 'महारानी लक्ष्मीबाई (MLB) मेडिकल कॉलेज, झांसी',
+          registrationNumber: 'स्नातकोत्तर सर्जिकल उपाधि',
+          year: 'स्नातकोत्तर (2008)',
+          icon: Award,
           details:
-            'एमबीबीएस छात्रों और स्नातकोत्तर ऑर्थोपेडिक सर्जिकल रेजिडेंट डॉक्टरों को अकादमिक व्याख्यान, क्लिनिकल वार्ड राउंड एवं ऑपरेशन थिएटर में व्यावहारिक सर्जिकल मार्गदर्शन प्रदान किया।',
+            'MLB मेडिकल कॉलेज, झांसी से तीन वर्षीय गहन ऑर्थोपेडिक सर्जिकल रेजीडेंसी प्रशिक्षण, जिसमें जोड़ प्रत्यारोपण, जटिल फ्रैक्चर फिक्सेशन, आर्थ्रोस्कोपी व हड्डी रोग उपचार शामिल हैं।',
         },
       ]
     : [
@@ -92,30 +92,30 @@ export default async function CredentialsPage({
         },
         {
           title: 'Master of Surgery (M.S. Orthopaedics)',
-          authority: 'Postgraduate Medical Examination Board',
-          registrationNumber: 'Specialist Surgical Degree',
-          year: 'Postgraduate Qualification',
+          authority: 'Maharani Laxmi Bai (MLB) Medical College, Jhansi',
+          registrationNumber: 'Postgraduate Surgical Degree',
+          year: 'Postgraduate (2008)',
           icon: Award,
           details:
             'Three-year intensive postgraduate surgical residency training spanning joint replacement, complex fracture fixation, reconstructive joint surgery, and bone pathology.',
         },
         {
           title: 'Bachelor of Medicine & Bachelor of Surgery (M.B.B.S.)',
-          authority: 'Accredited Medical College & University',
+          authority: 'Sarojini Naidu Medical College (SNMC), Agra',
           registrationNumber: 'Primary Medical Qualification',
-          year: 'Graduation',
+          year: 'Graduation (2004)',
           icon: GraduationCap,
           details:
-            'Undergraduate medical graduation encompassing extensive clinical rotations in emergency medicine, general surgery, musculoskeletal anatomy, and internal medicine.',
+            'Undergraduate medical graduation from SNMC Agra encompassing clinical rotations in emergency medicine, general surgery, musculoskeletal anatomy, and internal medicine.',
         },
         {
-          title: 'Former Assistant Professor of Orthopaedics',
-          authority: 'Medical Teaching Institution',
-          registrationNumber: 'Academic Faculty Tenure',
-          year: 'Faculty Teaching',
+          title: '20+ Years Clinical & Surgical Practice',
+          authority: 'Sikandra, Agra & Western Uttar Pradesh',
+          registrationNumber: 'Specialist Clinical Practice',
+          year: 'Active Practice',
           icon: Building2,
           details:
-            'Conducted academic lectures, clinical bedside clinics, and supervised operative training for undergraduate MBBS students and postgraduate orthopaedic surgical residents.',
+            'Over two decades of outpatient consultation, non-surgical joint preservation, Total Knee & Hip Replacement (TKR/THR), arthroscopy, and emergency fracture trauma surgery.',
         },
       ];
 

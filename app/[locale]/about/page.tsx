@@ -28,8 +28,8 @@ export async function generateMetadata({
         : 'About Dr. Gaurav Sharma | Consultant Orthopaedic Surgeon Agra',
     description:
       locale === 'hi'
-        ? 'डॉ. गौरव शर्मा का परिचय: एम.एस. (हड्डी एवं जोड़ रोग), 20+ वर्ष सर्जिकल अनुभव, पूर्व असिस्टेंट प्रोफेसर, सत्यम कॉम्प्लेक्स, सिकंदरा, आगरा।'
-        : 'Profile of Dr. Gaurav Sharma: MS (Orthopaedics), 20+ years surgical background, former Assistant Professor of Orthopaedics, practising at Satyam Complex, Sikandra, Agra.',
+        ? 'डॉ. गौरव शर्मा का परिचय: एम.बी.बी.एस. (SNMC आगरा), एम.एस. ऑर्थोपेडिक्स (MLB झांसी), 20+ वर्ष सर्जिकल अनुभव, सत्यम कॉम्प्लेक्स, सिकंदरा, आगरा।'
+        : 'Profile of Dr. Gaurav Sharma: MBBS (SNMC Agra), MS Orthopaedics (MLB Medical College Jhansi), 20+ years surgical experience, practising at Satyam Complex, Sikandra, Agra.',
     path: '/about',
     locale: locale as 'en' | 'hi',
   });
@@ -154,12 +154,12 @@ export default async function AboutPage({
               <GraduationCap className="w-6 h-6" />
             </div>
             <h3 className="font-serif text-lg font-bold text-[#0F2744]">
-              {isHi ? 'पूर्व असिस्टेंट प्रोफेसर' : 'Former Assistant Professor'}
+              {isHi ? 'SNMC आगरा व MLB झांसी' : 'SNMC Agra & MLB Jhansi'}
             </h3>
             <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
               {isHi
-                ? 'मेडिकल कॉलेज में एमबीबीएस छात्रों और पोस्ट ग्रेजुएट ऑर्थोपेडिक डॉक्टरों को पढ़ाने और प्रशिक्षण देने का दीर्घकालिक अकादमिक अनुभव।'
-                : 'Spent years training undergraduate and postgraduate orthopaedic residents, embedding a culture of evidence-based medical literature and surgical discipline.'}
+                ? 'सरोजिनी नायडू मेडिकल कॉलेज (SNMC), आगरा से एम.बी.बी.एस. तथा महारानी लक्ष्मीबाई (MLB) मेडिकल कॉलेज, झांसी से एम.एस. (ऑर्थोपेडिक्स) की शिक्षा।'
+                : 'Completed M.B.B.S. from Sarojini Naidu Medical College (SNMC), Agra and M.S. (Orthopaedics) from Maharani Laxmi Bai (MLB) Medical College, Jhansi.'}
             </p>
           </div>
 

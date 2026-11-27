@@ -33,7 +33,7 @@ export async function GET() {
       title: 'Verified Medical Credentials — UPMC Reg. 48757',
       link: `${SITE_URL}/en/credentials`,
       description:
-        'M.B.B.S., M.S. (Orthopaedics), Former Assistant Professor of Orthopaedics, with 20+ years of clinical and surgical experience.',
+        'M.B.B.S. (SNMC Agra), M.S. (Orthopaedics, MLB Jhansi), UPMC Reg. 48757, with 20+ years of clinical and surgical experience.',
       pubDate: lastBuildDate,
     },
   ];

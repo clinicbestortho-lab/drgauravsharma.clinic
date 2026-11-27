@@ -94,12 +94,12 @@ export function HeroSection() {
                     <strong className="text-[#0F2744] font-semibold">
                       {DOCTOR_PROFILE.hindiName || 'डॉ. गौरव शर्मा'}
                     </strong>{' '}
-                    (एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स, पूर्व असिस्टेंट प्रोफेसर, यूपीएमसी पंजी. 48757) द्वारा संचालित वरिष्ठ हड्डी एवं जोड़ प्रत्यारोपण सर्जरी केंद्र है। 20+ वर्षों के सर्जिकल अनुभव के साथ यहाँ टोटल नी रिप्लेसमेंट (TKR), हिप रिप्लेसमेंट (THR), आर्थ्रोस्कोपी (ACL/कंधा), रिवीजन जॉइंट सर्जरी और 24/7 फ्रैक्चर ट्रॉमा सर्जरी व गैर-सर्जिकल जोड़ संरक्षण किया जाता है।
+                    (एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स, यूपीएमसी पंजी. 48757) द्वारा संचालित वरिष्ठ हड्डी एवं जोड़ प्रत्यारोपण सर्जरी केंद्र है। 20+ वर्षों के सर्जिकल अनुभव के साथ यहाँ टोटल नी रिप्लेसमेंट (TKR), हिप रिप्लेसमेंट (THR), आर्थ्रोस्कोपी (ACL/कंधा), रिवीजन जॉइंट सर्जरी और 24/7 फ्रैक्चर ट्रॉमा सर्जरी व गैर-सर्जिकल जोड़ संरक्षण किया जाता है।
                   </>
                 ) : (
                   <>
                     <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma Orthopaedic Clinic</strong> is a senior orthopaedic and joint replacement surgical centre in Sikandra, Agra led by{' '}
-                    <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma</strong> (M.B.B.S., M.S. Orthopaedics, Former Assistant Professor, UPMC Reg. 48757) with 20+ years of surgical experience. Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL &amp; Shoulder Surgery, Revision Arthroplasty, and 24/7 Fracture Trauma Surgery alongside evidence-based joint preservation.
+                    <strong className="text-[#0F2744] font-semibold">Dr. Gaurav Sharma</strong> (M.B.B.S., M.S. Orthopaedics, UPMC Reg. 48757) with 20+ years of surgical experience. Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL &amp; Shoulder Surgery, Revision Arthroplasty, and 24/7 Fracture Trauma Surgery alongside evidence-based joint preservation.
                   </>
                 )}
               </p>
@@ -233,8 +233,8 @@ export function HeroSection() {
                     </p>
                     <p className="text-xs text-[#CBD5E1] mt-0.5">
                       {isHi
-                        ? 'पूर्व असिस्टेंट प्रोफेसर, ऑर्थोपेडिक्स विभाग'
-                        : 'Former Assistant Professor of Orthopaedics'}
+                        ? 'जोड़ प्रत्यारोपण, ट्रॉमा एवं स्पाइन सर्जन'
+                        : 'Joint Replacement, Trauma & Spine Surgeon'}
                     </p>
                   </div>
                 </div>

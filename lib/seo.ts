@@ -14,7 +14,7 @@ export const SITE_URL =
 export const SITE_NAME =
   'Dr. Gaurav Sharma Orthopaedic Clinic | Sikandra, Agra';
 export const DEFAULT_DESCRIPTION =
-  'Senior Orthopaedic & Joint Replacement Surgeon in Sikandra, Agra — Dr. Gaurav Sharma (MBBS, MS Orthopaedics, Former Assistant Professor, 20+ Yrs Surgical Exp). Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL & Shoulder Surgery, Revision Arthroplasty, and 24/7 Fracture Trauma Surgery.';
+  'Senior Orthopaedic & Joint Replacement Surgeon in Sikandra, Agra — Dr. Gaurav Sharma (MBBS SNMC Agra, MS Orthopaedics MLB Jhansi, UPMC Reg. 48757, 20+ Yrs Surgical Exp). Specializing in Total Knee Replacement (TKR), Total Hip Replacement (THR), Arthroscopic ACL & Shoulder Surgery, Revision Arthroplasty, and 24/7 Fracture Trauma Surgery.';
 
 export const SEO_KEYWORDS = [
   'orthopaedic doctor in Agra',
