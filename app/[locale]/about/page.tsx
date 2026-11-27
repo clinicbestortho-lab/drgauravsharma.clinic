@@ -119,7 +119,8 @@ export default async function AboutPage({
                         : 'Dr. Gaurav Sharma reviewing X-rays on clinic viewbox with anatomical joint models'
                     }
                     fill
-                    sizes="(max-width: 1024px) 100vw, 420px"
+                    quality={95}
+                    sizes="(max-width: 1024px) 100vw, 720px"
                     className="object-cover"
                   />
                 </div>

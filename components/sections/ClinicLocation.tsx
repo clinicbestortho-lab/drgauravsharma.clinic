@@ -301,7 +301,7 @@ export function ClinicLocation() {
                 src: '/images/clinic/ot-hip-prosthesis.jpg',
                 title: t('gal3Title'),
                 desc: t('gal3Desc'),
-                pos: 'object-[50%_38%]',
+                pos: 'object-[50%_20%]',
               },
               {
                 src: '/images/clinic/c-arm-orif-fixation.jpg',
@@ -314,12 +314,13 @@ export function ClinicLocation() {
                 key={idx}
                 className="group rounded-2xl bg-white border border-[#E2DBD0] overflow-hidden shadow-xs hover:shadow-md transition-shadow flex flex-col"
               >
-                <div className="relative aspect-square bg-[#EAE4D9] overflow-hidden">
+                <div className="relative aspect-[5/4] bg-[#EAE4D9] overflow-hidden">
                   <Image
                     src={item.src}
                     alt={`${item.title} — ${item.desc}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={95}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
                     className={`object-cover ${item.pos} group-hover:scale-105 transition-transform duration-500`}
                   />
                 </div>

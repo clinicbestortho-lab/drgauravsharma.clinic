@@ -237,7 +237,8 @@ export default async function SurgeryDetailPage({
                     : SURGERY_VISUALS[surgery.slug].enCaption
                 }
                 fill
-                sizes="(max-width: 768px) 100vw, 420px"
+                quality={95}
+                sizes="(max-width: 768px) 100vw, 720px"
                 className={`object-cover ${SURGERY_VISUALS[surgery.slug].pos || 'object-center'}`}
               />
             </div>
