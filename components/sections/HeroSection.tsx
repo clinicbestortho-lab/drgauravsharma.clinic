@@ -49,7 +49,8 @@ export function HeroSection() {
                   src="/images/doctor-portrait.jpg"
                   alt={isHi ? 'डॉ. गौरव शर्मा' : 'Dr. Gaurav Sharma'}
                   fill
-                  sizes="44px"
+                  quality={95}
+                  sizes="96px"
                   className="object-cover object-top"
                 />
               </div>
@@ -210,8 +211,9 @@ export function HeroSection() {
                     }
                     fill
                     priority
+                    quality={95}
                     className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 450px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 60vw, 900px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none" />
 
